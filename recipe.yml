@@ -2,7 +2,7 @@ resources:
   - type: package
     name: ansible
   - type: package
-    name: brew-cask
+    name: caskroom/cask/brew-cask
 
   - type: homebrew_cask_package
     name: alfred
@@ -24,9 +24,9 @@ resources:
     name: slack
   - type: homebrew_cask_package
     name: vagrant
-  - type: homebrew_cask_package
+  - type: nothing
     name: virtualbox
-  - type: homebrew_cask_package
+  - type: nothing
     name: visual-studio-code
 
   - id: ShowStatusBar_finder
@@ -45,7 +45,7 @@ resources:
     value: 30 
     recheck_script: "true"
 
-  - type: line
+  - type: nothing
     path: /etc/sudoers
     pattern: 'hiroyuki +ALL=\(ALL\) NOPASSWD: ALL'
     line: "hiroyuki ALL=(ALL) NOPASSWD: ALL"
