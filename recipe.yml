@@ -1,0 +1,53 @@
+resources:
+  - type: package
+    name: ansible
+  - type: package
+    name: brew-cask
+
+  - type: homebrew_cask_package
+    name: alfred
+  - type: homebrew_cask_package
+    name: atom
+  - type: homebrew_cask_package
+    name: dropbox
+  - type: homebrew_cask_package
+    name: electron
+  - type: homebrew_cask_package
+    name: google-japanese-ime
+  - type: homebrew_cask_package
+    name: karabiner
+  - type: homebrew_cask_package
+    name: kobito
+  - type: homebrew_cask_package
+    name: skitch
+  - type: homebrew_cask_package
+    name: slack
+  - type: homebrew_cask_package
+    name: vagrant
+  - type: homebrew_cask_package
+    name: virtualbox
+  - type: homebrew_cask_package
+    name: visual-studio-code
+
+  - id: ShowStatusBar_finder
+    type: defaults
+    domain: com.apple.finder
+    key: ShowStatusBar
+    value: 1
+  - id: TapClicking_trackpad
+    type: defaults
+    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
+    key: Clicking
+    value: 1
+
+  - type: karabiner
+    key: repeat.wait
+    value: 30 
+    recheck_script: "true"
+
+  - type: line
+    path: /etc/sudoers
+    pattern: 'hiroyuki +ALL=\(ALL\) NOPASSWD: ALL'
+    line: "hiroyuki ALL=(ALL) NOPASSWD: ALL"
+    insert_before: "^#includedir"
+    validation_script: visudo -cf %{path}
