@@ -1,3 +1,3 @@
 # dotfiles
 
-curl -LSfs https://raw.githubusercontent.com/r7kamura/dotfiles/master/install.sh | bash
+curl -LSfs https://raw.githubusercontent.com/hiroyuki12/dotfiles/master/install.sh | bash
