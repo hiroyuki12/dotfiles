@@ -34,11 +34,23 @@ resources:
     domain: com.apple.finder
     key: ShowStatusBar
     value: 1
-  - id: TapClicking_trackpad
+  - id: nothing
+    type: defaults
+    domain: com.apple.AppleMultitouchTrackpad
+    key: Clicking
+    value: 1
+  - id: nothing
     type: defaults
     domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
     key: Clicking
     value: 1
+  - id: ShowPath_finder
+    type: defaults
+    domain: com.apple.finder
+    key: _FXShowPosixPathInTitle
+    value: 0
+    notify:
+      - killall_Finder
 
   - type: karabiner
     key: repeat.wait
@@ -51,3 +63,8 @@ resources:
     line: "hiroyuki ALL=(ALL) NOPASSWD: ALL"
     insert_before: "^#includedir"
     validation_script: visudo -cf %{path}
+
+handlers:
+  - id: killall_Finder
+    type: command
+    script: killall Finder
