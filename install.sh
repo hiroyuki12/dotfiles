@@ -27,3 +27,6 @@ sudo bundle exec serverkit apply recipe.yml
 
 # Copy .bash_profile
 cp .bash_profile ~/
+
+# Copy .vimrc
+cp .vimrc ~/
