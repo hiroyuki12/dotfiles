@@ -1,9 +1,11 @@
 resources:
+  # brew
   - type: package
     name: ansible
   - type: package
     name: caskroom/cask/brew-cask
 
+  # brew cask
   - type: homebrew_cask_package
     name: alfred
   - type: homebrew_cask_package
@@ -29,6 +31,7 @@ resources:
   - type: nothing
     name: visual-studio-code
 
+  # defaults
   - id: ShowStatusBar_finder
     type: defaults
     domain: com.apple.finder
@@ -52,6 +55,15 @@ resources:
     notify:
       - killall_Finder
 
+  # command
+  - type: command
+    script: defaults write "com.apple.dock" "orientation" -string "left"
+    notiry:
+      - killall_Dock
+
+  - type: command
+    script: killall Dock
+
   - type: karabiner
     key: repeat.wait
     value: 30 
@@ -68,3 +80,6 @@ handlers:
   - id: killall_Finder
     type: command
     script: killall Finder
+  - id: killall_Dock
+    type: command
+    script: killall Dock
