@@ -26,49 +26,57 @@ resources:
     name: slack
   - type: homebrew_cask_package
     name: vagrant
-  - type: nothing
-    name: virtualbox
-  - type: nothing
-    name: visual-studio-code
+#  - type: homebrew_cask_package
+#    name: virtualbox
+#  - type: homebrew_cask_package
+#    name: visual-studio-code
 
   # defaults
-  - id: ShowStatusBar_finder
     type: defaults
     domain: com.apple.finder
     key: ShowStatusBar
     value: 1
-  - id: nothing
+  - id: Clicking_trackpad
+#type: defaults
     type: defaults
     domain: com.apple.AppleMultitouchTrackpad
-    key: Clicking
-    value: 1
-  - id: nothing
-    type: defaults
-    domain: com.apple.driver.AppleBluetoothMultitouch.trackpad
     key: Clicking
     value: 1
   - id: ShowPath_finder
     type: defaults
     domain: com.apple.finder
     key: _FXShowPosixPathInTitle
-    value: 0
+    value: 1
     notify:
       - killall_Finder
+  - type: defaults
+    domain: com.apple.dock
+    key: magnification
+    value: 1
+    notify:
+      - killall_Dock
+  - type: defaults
+    domain: com.apple.dock
+    key: largesize
+    value: 100
+    notify:
+      - killall_Dock
 
   # command
   - type: command
     script: defaults write "com.apple.dock" "orientation" -string "left"
     notiry:
       - killall_Dock
-
+      
   - type: command
-    script: killall Dock
+    script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 
   - type: karabiner
     key: repeat.wait
     value: 30 
     recheck_script: "true"
 
+#- type: line
   - type: nothing
     path: /etc/sudoers
     pattern: 'hiroyuki +ALL=\(ALL\) NOPASSWD: ALL'
