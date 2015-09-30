@@ -49,7 +49,7 @@ resources:
     type: defaults
     domain: com.apple.finder
     key: _FXShowPosixPathInTitle
-    value: 1
+    value: 0
     notify:
       - killall_Finder
   - type: defaults
@@ -73,6 +73,16 @@ resources:
       
   - type: command
     script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+
+# Set `${HOME}` as the default location for new Finder windows
+# 新しいウィンドウでデフォルトでホームフォルダを開く
+#  - type: command
+#    script: defaults write com.apple.finder NewWindowTarget -string "PfDe"
+#  - type: command
+#    script: defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+#  - type: command
+#    script: killall Finder
+
 
   - type: karabiner
     key: repeat.wait
