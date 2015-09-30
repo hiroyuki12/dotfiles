@@ -34,4 +34,4 @@ cp .vimrc ~/
 popd > /dev/null
 
 # Cleanup
-rm -rf ${tmpfile} ${workspace}
+rm -rf ${tempfile} ${workspace}
