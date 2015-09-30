@@ -30,3 +30,8 @@ cp .bash_profile ~/
 
 # Copy .vimrc
 cp .vimrc ~/
+# Move to original path
+popd > /dev/null
+
+# Cleanup
+rm -rf ${tmpfile} ${workspace}

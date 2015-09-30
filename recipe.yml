@@ -4,6 +4,9 @@ resources:
     name: ansible
   - type: package
     name: caskroom/cask/brew-cask
+  - type: package
+    name: packer
+
 
   # brew cask
   - type: homebrew_cask_package
@@ -76,7 +79,7 @@ resources:
     value: 30 
     recheck_script: "true"
 
-#- type: line
+#  - type: line
   - type: nothing
     path: /etc/sudoers
     pattern: 'hiroyuki +ALL=\(ALL\) NOPASSWD: ALL'
