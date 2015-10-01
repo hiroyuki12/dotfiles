@@ -85,8 +85,16 @@ resources:
 
 
   - type: karabiner
+    key: remap.jis_shiftSpace2toggle_kana_eisuu
+    value: 1
+    recheck_script: "true"
+  - type: karabiner
+    key: repeat.initial_wait
+    value: 100
+    recheck_script: "true"
+  - type: karabiner
     key: repeat.wait
-    value: 30 
+    value: 30
     recheck_script: "true"
 
 #  - type: line
