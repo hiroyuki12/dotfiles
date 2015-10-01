@@ -39,19 +39,16 @@ resources:
     domain: com.apple.finder
     key: ShowStatusBar
     value: 1
-  - id: Clicking_trackpad
-#type: defaults
+  - id: TrackingSpeed_trackpad  # need logout , command + shift + q
     type: defaults
-    domain: com.apple.AppleMultitouchTrackpad
-    key: Clicking
-    value: 1
-  - id: ShowPath_finder
+    domain: Apple Global Domain 
+    key: com.apple.trackpad.scaling
+    value: 2.5
+  - id: ShowPath_finder # タイトルバーにパスを表示
     type: defaults
     domain: com.apple.finder
     key: _FXShowPosixPathInTitle
     value: 0
-    notify:
-      - killall_Finder
   - type: defaults
     domain: com.apple.dock
     key: magnification
@@ -73,6 +70,9 @@ resources:
       
   - type: command
     script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+
+  - type: command
+    script: defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 1
 
 # Set `${HOME}` as the default location for new Finder windows
 # 新しいウィンドウでデフォルトでホームフォルダを開く
