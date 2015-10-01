@@ -30,6 +30,10 @@ cp .bash_profile ~/
 
 # Copy .vimrc
 cp .vimrc ~/
+
+# Copy .gitconfig
+cp .gitconfig ~/
+
 # Move to original path
 popd > /dev/null
 
