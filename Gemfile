@@ -6,3 +6,7 @@ gem "serverkit-defaults"
 gem "serverkit-homebrew"
 gem "serverkit-karabiner"
 gem "serverkit-rbenv"
+
+gem 'serverspec'
+gem 'rake'
+gem 'highline'
