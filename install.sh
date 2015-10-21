@@ -34,6 +34,15 @@ cp .vimrc ~/
 # Copy .gitconfig
 cp .gitconfig ~/
 
+# git clone, install bundler serverkit
+mkdir ~/tmp; mkdir ~/tmp/github
+cd ~/tmp/github
+git clone https://github.com/hiroyuki12/dotfiles.git
+cd dotfiles
+sudo gem install bundler
+sudo gem install serverkit
+serverkit apply recipe.yml
+
 # Move to original path
 popd > /dev/null
 
