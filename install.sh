@@ -35,8 +35,8 @@ cp .vimrc ~/
 cp .gitconfig ~/
 
 # git clone, install bundler serverkit
-mkdir ~/tmp; mkdir ~/tmp/github
-cd ~/tmp/github
+mkdir ~/github
+cd ~/github
 git clone https://github.com/hiroyuki12/dotfiles.git
 cd dotfiles
 sudo gem install bundler
