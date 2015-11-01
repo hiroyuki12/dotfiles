@@ -29,8 +29,10 @@ resources:
     name: slack
   - type: homebrew_cask_package
     name: vagrant
+  - type: homebrew_cask_package
+    name: virtualbox
 #  - type: homebrew_cask_package
-#    name: virtualbox
+#    name: google-chrome
 #  - type: homebrew_cask_package
 #    name: visual-studio-code
 
