@@ -88,19 +88,19 @@ nnoremap qq :wq<CR>
 " :ls でbuffer一覧表示
 " :e .emacs で新しくbufferに開く
 "buffer operation
-nnoremap sn :bn<CR>
+"nnoremap sn :bn<CR>
 nnoremap <C-T> :bn<CR>
-nnoremap sp :bp<CR>
+"nnoremap sp :bp<CR>
 "window operation
 " ssで分割 scで閉じる so
-noremap ss <C-W>s
-noremap sc <C-W>c
-noremap so <C-W>o
+"noremap ss <C-W>s
+"noremap sc <C-W>c
+"noremap so <C-W>o
 "move
 "tt で別のウィンドウへ移動 sjで下 siで上
 noremap tt <C-W><C-W>
-noremap sj <C-W>j
-noremap si <C-W>k
+"noremap sj <C-W>j
+"noremap si <C-W>k
 "resize +広げる -狭める
 noremap + <C-W>+
 noremap - <C-W>-
@@ -317,3 +317,19 @@ endif
 " Shift + v で行を選択して、> でindent追加。 >.. で連続
 " Shift + q  Exモード
 " 保存 :w。保存して終了 :wq。保存せず終了 :q!。
+
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundle 'Lokaltog/vim-easymotion'
+
+call neobundle#end()
+
+filetype plugin indent on
+
+NeoBundleCheck
+
+nmap s <Plug>(easymotion-s2)
