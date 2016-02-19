@@ -43,6 +43,10 @@ sudo gem install bundler
 sudo gem install serverkit
 serverkit apply recipe.yml
 
+# NeoBundle
+mkdir -p ~/.vim/bundle
+git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
 # Move to original path
 popd > /dev/null
 
