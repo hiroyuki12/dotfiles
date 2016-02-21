@@ -21,8 +21,8 @@ resources:
     name: google-japanese-ime
   - type: homebrew_cask_package
     name: karabiner
-  - type: homebrew_cask_package
-    name: kobito
+#  - type: homebrew_cask_package
+#    name: kobito
   - type: homebrew_cask_package
     name: skitch
   - type: homebrew_cask_package
