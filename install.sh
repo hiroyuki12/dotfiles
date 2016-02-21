@@ -32,15 +32,6 @@ sudo gem install bundler
 sudo gem install serverkit
 serverkit apply recipe.yml
 
-# ln .vimrc, .bash_profile, .gitconfig
-ln -s ~/github/dotfiles/.vimrc ~/.vimrc
-ln -s ~/github/dotfiles/.bash_profile ~/.bash_profile
-ln -s ~/github/dotfiles/.gitconfig ~/.gitconfig
-
-# NeoBundle (easy-motion)
-mkdir -p ~/.vim/bundle
-git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
-
 # Move to original path
 popd > /dev/null
 

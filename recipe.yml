@@ -107,6 +107,17 @@ resources:
     insert_before: "^#includedir"
     validation_script: visudo -cf %{path}
 
+# NeoBundle (easy-motion)
+  - type: command
+    script: git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+# ln .vimrc, .bash_profile, .gitconfig
+  - type: command
+    script: ln -s ~/github/dotfiles/.vimrc ~/.vimrc
+  - type: command
+    script: ln -s ~/github/dotfiles/.bash_profile ~/.bash_profile
+  - type: command
+    script: ln -s ~/github/dotfiles/.gitconfig ~/.gitconfig
+
 handlers:
   - id: killall_Finder
     type: command
