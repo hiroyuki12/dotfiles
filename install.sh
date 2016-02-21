@@ -26,10 +26,8 @@ sudo bundle install > /dev/null
 sudo bundle exec serverkit apply recipe.yml
 
 # git clone, install bundler serverkit
-mkdir ~/github
-cd ~/github
-git clone https://github.com/hiroyuki12/dotfiles.git
-cd dotfiles
+git clone https://github.com/hiroyuki12/dotfiles.git ~/github/dotfiles
+cd ~/github/dotfiles
 sudo gem install bundler
 sudo gem install serverkit
 serverkit apply recipe.yml
