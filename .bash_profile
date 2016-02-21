@@ -11,3 +11,6 @@ alias gr='git checkout HEAD'
 alias ll='ls -l'
 alias la='ls -a'
 alias ls='ls -G'
+
+alias sea='brew search'
+alias b='brew install'
