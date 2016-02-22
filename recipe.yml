@@ -6,7 +6,8 @@ resources:
     name: caskroom/cask/brew-cask
   - type: package
     name: packer
-
+  - type: package
+    name: hub
 
   # brew cask
   - type: homebrew_cask_package
