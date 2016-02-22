@@ -10,6 +10,8 @@ resources:
     name: hub  # hub browse
   - type: package
     name: argon/mas/mas
+#  - type: package
+#    name: Caskroom/cask/coteditor
 
   # brew cask
   - type: homebrew_cask_package
@@ -86,13 +88,14 @@ resources:
     script: defaults write "com.apple.dock" "orientation" -string "left"
     notiry:
       - killall_Dock
-      
   - type: command
     script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
   - type: command
     script: defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 1
 #  - type: command
 #    script: defaults write -g com.apple.trackpad.scaling -float 2.0
+#  - type: command
+#    script: mas install 1024640650  # CotEditor
 
 # Set `${HOME}` as the default location for new Finder windows
 # 新しいウィンドウでデフォルトでホームフォルダを開く
@@ -127,13 +130,17 @@ resources:
 # NeoBundle (easy-motion)
   - type: command
     script: git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+
 # ln .vimrc, .bash_profile, .gitconfig
-  - type: command
-    script: ln -s ~/github/dotfiles/.vimrc ~/.vimrc
-  - type: command
-    script: ln -s ~/github/dotfiles/.bash_profile ~/.bash_profile
-  - type: command
-    script: ln -s ~/github/dotfiles/.gitconfig ~/.gitconfig
+  - type: symlink
+    source: /Users/hiroyuki/.vimrc
+    destination: /Users/hiroyuki/github/dotfiles/.vimrc
+  - type: symlink
+    source: /Users/hiroyuki/.bash_profile
+    destination: /Users/hiroyuki/github/dotfiles/.bash_profil
+  - type: symlink
+    source: /Users/hiroyuki/.gitconfig
+    destination: /Users/hiroyuki/github/dotfiles/.gitconfig
 
 handlers:
   - id: killall_Finder
