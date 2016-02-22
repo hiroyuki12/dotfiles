@@ -94,8 +94,18 @@ resources:
     script: defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 1
 #  - type: command
 #    script: defaults write -g com.apple.trackpad.scaling -float 2.0
-#  - type: command
-#    script: mas install 1024640650  # CotEditor
+  - id: mas install CotEditor
+    type: command
+    check_script: "mas list | grep CotEditor"
+    script: mas install 1024640650
+  - id: mas install Xcode
+    type: command
+    check_script: "mas list | grep Xcode"
+    script: mas install 497799835
+  - id: mas install Wunderlist
+    type: command
+    check_script: "mas list | grep Wunderlist"
+    script: mas install 410628904
 
 # Set `${HOME}` as the default location for new Finder windows
 # 新しいウィンドウでデフォルトでホームフォルダを開く
