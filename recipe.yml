@@ -8,6 +8,8 @@ resources:
     name: packer
   - type: package
     name: hub  # hub browse
+  - type: package
+    name: argon/mas/mas
 
   # brew cask
   - type: homebrew_cask_package
@@ -87,9 +89,10 @@ resources:
       
   - type: command
     script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
-
   - type: command
     script: defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 1
+#  - type: command
+#    script: defaults write -g com.apple.trackpad.scaling -float 2.0
 
 # Set `${HOME}` as the default location for new Finder windows
 # 新しいウィンドウでデフォルトでホームフォルダを開く
