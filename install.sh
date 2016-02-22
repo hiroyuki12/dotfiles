@@ -30,6 +30,7 @@ git clone https://github.com/hiroyuki12/dotfiles.git ~/github/dotfiles
 cd ~/github/dotfiles
 sudo gem install bundler
 sudo gem install serverkit
+open Basic2.terminal
 serverkit apply recipe.yml
 
 # Move to original path

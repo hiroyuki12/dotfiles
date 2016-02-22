@@ -63,6 +63,14 @@ resources:
     value: 100
     notify:
       - killall_Dock
+  - type: defaults
+    domain: com.apple.Terminal
+    key: Default Window Settings
+    value: Basic2
+  - type: defaults
+    domain: com.apple.Terminal
+    key: Startup Window Settings
+    value: Basic2
 
   # command
   - type: command
