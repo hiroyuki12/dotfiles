@@ -7,7 +7,7 @@ resources:
   - type: package
     name: packer
   - type: package
-    name: hub
+    name: hub  # hub browse
 
   # brew cask
   - type: homebrew_cask_package
