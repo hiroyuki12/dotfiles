@@ -14,3 +14,6 @@ alias ls='ls -G'
 
 alias sea='brew search'
 alias b='brew install'
+
+alias d='cd ~/github/dotfiles'
+alias a='serverkit apply recipe.yml'
