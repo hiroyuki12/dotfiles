@@ -12,6 +12,8 @@ resources:
     name: argon/mas/mas
 #  - type: package
 #    name: Caskroom/cask/coteditor
+  - type: package
+    name: go
 
   # brew cask
   - type: homebrew_cask_package
