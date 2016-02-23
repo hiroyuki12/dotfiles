@@ -138,8 +138,15 @@ resources:
     validation_script: visudo -cf %{path}
 
 # NeoBundle (easy-motion)
-  - type: command
-    script: git clone git://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
+  - type: git
+    path: /Users/hiroyuki/.vim/bundle/neobundle.vim
+    repository: https://github.com/Shougo/neobundle.vim
+    state: updated
+# dotfiles
+  - type: git
+    path: /Users/hiroyuki/github/dotfiles
+    repository: https://github/com/hiroyuki12/dotfiles.git
+    state: updated
 
 # ln .vimrc, .bash_profile, .gitconfig
   - type: symlink

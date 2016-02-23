@@ -25,12 +25,11 @@ sudo bundle install > /dev/null
 # Run installer
 sudo bundle exec serverkit apply recipe.yml
 
-# git clone, install bundler serverkit
-git clone https://github.com/hiroyuki12/dotfiles.git ~/github/dotfiles
+# install bundler serverkit
 cd ~/github/dotfiles
 sudo gem install bundler
 sudo gem install serverkit
-open Basic2.terminal
+open Basic2.terminal  # add Terminal Profile
 serverkit apply recipe.yml
 
 # Move to original path
