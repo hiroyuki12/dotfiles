@@ -27,8 +27,8 @@ sudo bundle exec serverkit apply recipe.yml
 
 # install bundler serverkit
 cd ~/github/dotfiles
-sudo gem install bundler
-sudo gem install serverkit
+sudo which bundle > /dev/null || sudo gem install bundler
+sudo which serverkit > /dev/null || sudo gem install serverkit
 open Basic2.terminal  # add Terminal Profile
 serverkit apply recipe.yml
 
