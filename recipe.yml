@@ -36,10 +36,8 @@ resources:
     name: slack
   - type: homebrew_cask_package
     name: vagrant
-  - type: homebrew_cask_package
-    name: virtualbox
-#  - type: homebrew_cask_package
-#    name: google-chrome
+# - type: homebrew_cask_package
+#    name: virtualbox
 #  - type: homebrew_cask_package
 #    name: visual-studio-code
 
@@ -108,6 +106,10 @@ resources:
     type: command
     check_script: "mas list | grep Wunderlist"
     script: mas install 410628904
+  - id: mas install Twitter
+    type: command
+    check_script: "mas list | grep Twitter"
+    script: mas install 440978999
 
 # Set `${HOME}` as the default location for new Finder windows
 # 新しいウィンドウでデフォルトでホームフォルダを開く
