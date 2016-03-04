@@ -155,7 +155,7 @@ resources:
 # dotfiles
   - type: git
     path: /Users/hiroyuki/github/dotfiles
-    repository: https://github/com/hiroyuki12/dotfiles.git
+    repository: https://github.com/hiroyuki12/dotfiles.git
     state: updated
 
 # ln .vimrc, .bash_profile, .gitconfig
@@ -164,7 +164,7 @@ resources:
     destination: /Users/hiroyuki/github/dotfiles/.vimrc
   - type: symlink
     source: /Users/hiroyuki/.bash_profile
-    destination: /Users/hiroyuki/github/dotfiles/.bash_profil
+    destination: /Users/hiroyuki/github/dotfiles/.bash_profile
   - type: symlink
     source: /Users/hiroyuki/.gitconfig
     destination: /Users/hiroyuki/github/dotfiles/.gitconfig
