@@ -14,6 +14,8 @@ resources:
 #    name: Caskroom/cask/coteditor
   - type: package
     name: go
+  - type: package
+    name: mackup
 
   # brew cask
   - type: homebrew_cask_package
@@ -110,6 +112,10 @@ resources:
     type: command
     check_script: "mas list | grep Twitter"
     script: mas install 440978999
+  - id: mas install Twitter
+    type: command
+    check_script: "mas list | grep Kobito"
+    script: mas install 896624060
 
 # Set `${HOME}` as the default location for new Finder windows
 # 新しいウィンドウでデフォルトでホームフォルダを開く
