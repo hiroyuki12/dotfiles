@@ -1,6 +1,3 @@
-" plugin .vim/plugin
-" NERD_commenter.vim http://d.hatena.ne.jp/tanakaBox/20070409/1176062438
-" FuzzyFinder http://www.vim.org/scripts/script.php?script_id=1984
 nnoremap sf :new<Cr>:FuzzyFinderFile<Cr>
 
 " http://hatena.g.hatena.ne.jp/hatenatech/20060515/1147682761
@@ -318,18 +315,4 @@ endif
 " Shift + q  Exモード
 " 保存 :w。保存して終了 :wq。保存せず終了 :q!。
 
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundle 'Lokaltog/vim-easymotion'
-
-call neobundle#end()
-
 filetype plugin indent on
-
-NeoBundleCheck
-
-nmap s <Plug>(easymotion-s2)
