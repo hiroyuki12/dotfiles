@@ -111,7 +111,7 @@ resources:
   - id: mas install Twitter
     type: command
     check_script: "mas list | grep Twitter"
-    script: mas install 440978999
+    script: mas install 409789998
   - id: mas install Twitter
     type: command
     check_script: "mas list | grep Kobito"
