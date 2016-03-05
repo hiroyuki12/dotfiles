@@ -1,43 +1,39 @@
 resources:
   # brew
-  - type: package
-    name: ansible
+#  - type: package
+#    name: ansible
   - type: package
     name: caskroom/cask/brew-cask
-  - type: package
-    name: packer
-  - type: package
-    name: hub  # hub browse
-  - type: package
-    name: argon/mas/mas
 #  - type: package
-#    name: Caskroom/cask/coteditor
-  - type: package
-    name: go
-  - type: package
-    name: mackup
+#    name: packer
+#  - type: package
+#    name: hub  # hub browse
+#  - type: package
+#    name: argon/mas/mas
+#  - type: package
+#    name: go
+#  - type: package
+#    name: mackup
 
   # brew cask
-  - type: homebrew_cask_package
-    name: alfred
-  - type: homebrew_cask_package
-    name: atom
+#  - type: homebrew_cask_package
+#    name: alfred
+#  - type: homebrew_cask_package
+#    name: atom
   - type: homebrew_cask_package
     name: dropbox
-  - type: homebrew_cask_package
-    name: electron
-  - type: homebrew_cask_package
-    name: google-japanese-ime
+#  - type: homebrew_cask_package
+#    name: electron
+#  - type: homebrew_cask_package
+#    name: google-japanese-ime
   - type: homebrew_cask_package
     name: karabiner
 #  - type: homebrew_cask_package
-#    name: kobito
-  - type: homebrew_cask_package
-    name: skitch
-  - type: homebrew_cask_package
-    name: slack
-  - type: homebrew_cask_package
-    name: vagrant
+#    name: skitch
+#  - type: homebrew_cask_package
+#    name: slack
+#  - type: homebrew_cask_package
+#    name: vagrant
 # - type: homebrew_cask_package
 #    name: virtualbox
 #  - type: homebrew_cask_package
@@ -113,10 +109,10 @@ resources:
     type: command
     check_script: "mas list | grep Twitter"
     script: mas install 409789998
-  - id: mas install Twitter
-    type: command
-    check_script: "mas list | grep Kobito"
-    script: mas install 896624060
+#  - id: mas install Kobito
+#    type: command
+#    check_script: "mas list | grep Kobito"
+#    script: mas install 896624060
   - id: mas install Pocket
     type: command
     check_script: "mas list | grep Pocket"
@@ -184,3 +180,4 @@ handlers:
   - id: killall_Safari
     type: command
     script: killall Safari
+
