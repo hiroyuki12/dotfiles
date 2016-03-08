@@ -19,7 +19,7 @@ if [ "$?" -ne 0 ]; then
 fi
 
 # Install serverkit and its dependencies
-sudo which bundle > /dev/null || sudo gem install bundler
+sudo gem install bundler
 sudo bundle install > /dev/null
 
 # Run installer
