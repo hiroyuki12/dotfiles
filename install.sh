@@ -26,11 +26,11 @@ sudo bundle install > /dev/null
 sudo bundle exec serverkit apply recipe.yml
 
 # install bundler serverkit
-cd ~/github/dotfiles
-sudo which bundle > /dev/null || sudo gem install bundler
-sudo which serverkit > /dev/null || sudo gem install serverkit
+#cd ~/github/dotfiles
+#sudo which bundle > /dev/null || sudo gem install bundler
+#sudo which serverkit > /dev/null || sudo gem install serverkit
 open Basic2.terminal  # add Terminal Profile
-serverkit apply recipe.yml
+#serverkit apply recipe.yml
 
 # Move to original path
 popd > /dev/null
