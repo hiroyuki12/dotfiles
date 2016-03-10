@@ -23,7 +23,7 @@ sudo gem install bundler
 sudo bundle install > /dev/null
 
 # Run installer
-sudo bundle exec serverkit apply recipe.yml
+bundle exec serverkit apply recipe.yml
 
 # install bundler serverkit
 #cd ~/github/dotfiles
