@@ -1,55 +1,46 @@
 nnoremap sf :new<Cr>:FuzzyFinderFile<Cr>
 
 " http://hatena.g.hatena.ne.jp/hatenatech/20060515/1147682761
-set nocompatible  " Use Vim defaults instead of 100% vi compatibility
-set backspace=indent,eol,start  " more powerful backspacing
-set nobackup    " Don't keep a backup file
+"set nocompatible  " Use Vim defaults instead of 100% vi compatibility
+"set backspace=indent,eol,start  " more powerful backspacing
+"set nobackup    " Don't keep a backup file
 "set number      " 行番号を表示 :se nu  非表示 :se nonu  :h number
 set incsearch   " 検索文字を打ち込むと即検索する（インクリメンタルサーチ）
-set wildmenu    " :e .v<TAB><TAB> した時に補完候補を上に表示
+"set wildmenu    " :e .v<TAB><TAB> した時に補完候補を上に表示
 "set list      " 改行に$を表示 :se list :se nolist
-set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
+"set expandtab
+"set tabstop=2
+"set softtabstop=2
+"set shiftwidth=2
 set ignorecase " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
-set autoindent
-set cindent
-set smarttab
-set laststatus=2
+"set autoindent
+"set cindent
+"set smarttab
+set laststatus=2  " need statusline
 "set statusline=%n\:\ %f\ %m\ %r%{&foldenable!=0?'[fen]':''}%=%l/%L\ (%p%%)\ %{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}
 " http://github.com/januswel/dotfiles/blob/68b7980885979acffd2be82a106032e6d2f9c5f4/.vimrc
 set statusline=%t\ %y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%r%m%=%c:%l/%L[%3p%%]
 
 "set cursorline   " :se cul  :se nocul  :h cursorli
-set hidden " バッファが編集中でもその他のファイルを開けるように
-set fileencoding=utf-8
-set encoding=utf-8
-set showmatch " 対応するカッコを強調表示
+"set hidden " バッファが編集中でもその他のファイルを開けるように
+"set fileencoding=utf-8
+"set encoding=utf-8
+"set showmatch " 対応するカッコを強調表示(   ) 
 
-syntax on " /etc/vimrc(fedora)
+syntax on " color    /etc/vimrc(fedora)
 "colorscheme darkblue " darkblue はデフォルトでインストール済み
 "colorscheme desert
 
 " keymap
 " http://hatena.g.hatena.ne.jp/hatenatech/20060515/1147682761
-" ノーマル、ビジュアル、挿入時、コマンド入力時(:wq)にShift + l(Ctrl + l)で抜ける
+" ノーマル、ビジュアル、挿入時、コマンド入力時(:wq)にCtrl + lで抜ける
 " L が入力できないので l を入力して~で大文字に変換
 " 本来Lは画面の一番下にカーソル移動 一番上はH
 imap <C-l> <esc>
-imap <C-g> <esc>
 map <C-l> <esc>
-map <C-g> <esc>
-"make Shift+l(Ctrl + l) an additional ESC
-"noremap L <ESC>
-"noremap <C-l> <ESC>
-"noremap <C-g> <ESC>
-"cnoremap L <C-C>
 "cnoremap <C-l> <C-C>
-"cnoremap <C-g> <C-C>
-" :w など入力時にShift + l でキャンセル
+" :w など入力時にCtrl + l でキャンセル
 cmap <C-l> <C-C>
-cmap <C-g> <C-C>
 "inoremap L <ESC>
 "inoremap <C-l> <ESC>
 "inoremap <C-g> <ESC>
@@ -57,19 +48,19 @@ cmap <C-g> <C-C>
 " .vimrcの再読み込み
 "nnoremap ,vr :source $HOME/.vimrc<CR>
 nnoremap ,vr :source %<CR>
-" Ctrl + z でジャンプする前の位置に移動(gg,Shift + g,10 Shift + g)
-map <C-z> <C-o>
+" Ctrl + o でジャンプする前の位置に移動(gg,Shift + g,10 Shift + g)
+"map <C-z> <C-o>
 " Ctrl + k で行末までカット
 map <C-k> D
 " Space で半画面スクロール Ctrl + u で上へ半画面スクロール
-"map <Space> <C-d>
-" Ctrl + a で行頭 本来Ctrl + a は値の増加
-map <C-a> 0
+map <Space> <C-d>
+" 0で行頭。Ctrl + a で行頭 本来Ctrl + a は値の増加
+"map <C-a> 0
 " すべて選択 ggVG
 " すべてコピー ggyG
 " 行末までコピー y Ctrl + e
-" Ctrl + e で行末 本来Ctrl + e は1行下にスクロール 上はCtrl + y
-map <C-e> $
+" $ で行末。Ctrl + e で行末 本来Ctrl + e は1行下にスクロール 上はCtrl + y
+"map <C-e> $
 " Shift + c 行末までカットして挿入モード
 " command mode 時 tcsh風のキーバインドに
 cmap <C-A> <Home>
@@ -77,7 +68,7 @@ cmap <C-E> <End>
 cmap <C-F> <Right>
 cmap <C-B> <Left>
 cmap <C-D> <Delete>
-" Ctrl + c で ESC(コマンド入力時(:wqとか))
+" Ctrl + l で ESC(コマンド入力時(:wqとか))
 " ee で上書き保存 eで文字の末尾に移動が遅くなる
 "nnoremap ee :w<CR>
 " qq で上書き保存して終了 Shift + zz
@@ -86,7 +77,7 @@ nnoremap qq :wq<CR>
 " :e .emacs で新しくbufferに開く
 "buffer operation
 "nnoremap sn :bn<CR>
-nnoremap <C-T> :bn<CR>
+"nnoremap <C-T> :bn<CR>
 "nnoremap sp :bp<CR>
 "window operation
 " ssで分割 scで閉じる so
@@ -95,23 +86,23 @@ nnoremap <C-T> :bn<CR>
 "noremap so <C-W>o
 "move
 "tt で別のウィンドウへ移動 sjで下 siで上
-noremap tt <C-W><C-W>
+"noremap tt <C-W><C-W>
 "noremap sj <C-W>j
 "noremap si <C-W>k
 "resize +広げる -狭める
-noremap + <C-W>+
-noremap - <C-W>-
+"noremap + <C-W>+
+"noremap - <C-W>-
 " zEnter で最大化
-noremap z<CR> <C-W>_
+"noremap z<CR> <C-W>_
 " z0 で最小化
-noremap z0 1<C-W>_
+"noremap z0 1<C-W>_
 " z. で均等に
-noremap z. <C-W>=
+"noremap z. <C-W>=
 " 表示行単位で行移動する 長い行で自動折り返した時用
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
 " b でブレース 対応する括弧(){}にジャンプ
-nmap b %
+"nmap b %
 " http://d.hatena.ne.jp/guyon/20081230/1230648901
 " http://github.com/guyon/configs/tree/master/.vimrc
 " 検索時に画面中央にくるようにする
@@ -207,14 +198,15 @@ if exists('&ambiwidth')
 endif
 
 " メモ memo
+" vimturor
 " :help a または :h a。分割ウィンドウで表示。scで閉じる。z.で同じサイズに
 " :h ctrl-z。:h insert-index。
 "
-" アンドゥ u
+" アンドゥ u。行全体のアンドゥ shift + u。やり直し Ctrl + r
 " 行の切り取り dd
 " 行のコピー yy
 " 4文字コピー y4
-" 行末までカット Ctrl + k
+" 行末までカット shift + d
 " 画面の一番上に移動  Shift + h  中央 Shift + m  一番下  Shift + l
 " ペースト p
 " 上書き保存 :w
@@ -231,7 +223,7 @@ endif
 " :x (または :wq) 保存して終了
 " :w で上書き保存
 " $ vimtutor
-" d0 行頭までをカット
+" d0 行頭までをカット。shift + d 行末までカット。
 " カーソルの位置は自動保存
 " 10 Shift + g で 10行めにジャンプ
 " 10 j 10行下にジャンプ。Ctrl + zで戻る
@@ -269,21 +261,20 @@ endif
 " markをつける ma(aは任意)  markにジャンプ 'a(aは任意) 終了後も保存
 " '' 直前の行（マーク）に戻る。ジャンプする前に戻ったり。
 " 大文字小文字の変換 ~
-" Shift + x 前の文字を削除(Backspaceと同じ)、x カーソルのある文字を削除
+" shift + x 前の文字を削除(Backspaceと同じ)、x カーソルのある文字を削除
 " 複数行まとめてコメント化 行頭でCtrl + v jjjj Shift + i # Esc
 " pathやファイル名などを表示 2 Ctrl + g
 " バッファのリストを表示 :ls
 " sn 次のバッファ  sp 前のバッファ
 " ファイルをバッファに開く :e .vimrc
 " 次のendの前まで削除 d/end<return>
-" :set nonu で行番号を非表示、 :set nu で表示
-" vllで範囲選択してyでコピー、pでカーソルの右にペースト Shift + p で左にペースト
-" vllで範囲選択してdでカット、pでカーソルの右にペースト Shift + p で左にペースト
+" vllで範囲選択してyでコピー、pでカーソルの右にペースト shift + p で左にペースト
+" vllで範囲選択してdでカット、pでカーソルの右にペースト shift + p で左にペースト
 " vllで選択中oで選択範囲の四隅へ移動
 " 行の特定の文字の手前まで削除 例  ) の手前まで削除するには、ct)
 " 半画面下にスクロール 上Ctrl + d  上Ctrl + u
-" 保存して終了 Shift + zz
-" アンドゥ u。行をまとめてアンドゥ Shift + u。
+" 保存して終了 shift + zz
+" アンドゥ u。行全体をアンドゥ Shift + u。
 " アンドゥのやり直し Ctrl + r
 " 10行めへジャンプ 10 Shift + g
 " 選択スタート v(visual)
@@ -307,10 +298,10 @@ endif
 " * カーソルのある位置の単語で検索。逆方向に検索は#。
 " cw 単語を切り取って挿入モード
 " dw 単語をカット
-" macro記録開始 qa(aは任意) 記録終了 q 実行 @a
+" macro記録開始 qa(aは任意) 記録終了 q。 実行 @a。2回実行 2@a
 " 行末までをカットして挿入モードへ Shift + c
 " コントロールコードの入力 Ctrl + Shift + v (例えば :set をコピーした状態で)
-" indent追加  >>、  indent解除  <<。 複数行選択しても可能
+" indent追加  shift + > + >、  indent解除  shift + < + <。 複数行選択しても可能
 " Shift + v で行を選択して、> でindent追加。 >.. で連続
 " Shift + q  Exモード
 " 保存 :w。保存して終了 :wq。保存せず終了 :q!。
