@@ -19,3 +19,5 @@ alias d='cd ~/github/dotfiles'
 alias a='serverkit apply recipe.yml'
 
 alias cls='clear'
+
+eval "$(rbenv init -)"
