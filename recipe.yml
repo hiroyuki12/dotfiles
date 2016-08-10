@@ -93,30 +93,30 @@ resources:
 #  - type: command
 #    script: defaults write -g com.apple.trackpad.scaling -float 2.0
 
-  - id: mas install CotEditor
-    type: command
-    check_script: "mas list | grep CotEditor"
-    script: mas install 1024640650
+#  - id: mas install CotEditor
+#    type: command
+#    check_script: "mas list | grep CotEditor"
+#    script: mas install 1024640650
 #  - id: mas install Xcode
 #    type: command
 #    check_script: "mas list | grep Xcode"
 #    script: mas install 497799835
-  - id: mas install Wunderlist
-    type: command
-    check_script: "mas list | grep Wunderlist"
-    script: mas install 410628904
-  - id: mas install Twitter
-    type: command
-    check_script: "mas list | grep Twitter"
-    script: mas install 409789998
+#  - id: mas install Wunderlist
+#    type: command
+#    check_script: "mas list | grep Wunderlist"
+#    script: mas install 410628904
+#  - id: mas install Twitter
+#    type: command
+#    check_script: "mas list | grep Twitter"
+#    script: mas install 409789998
 #  - id: mas install Kobito
 #    type: command
 #    check_script: "mas list | grep Kobito"
 #    script: mas install 896624060
-  - id: mas install Pocket
-    type: command
-    check_script: "mas list | grep Pocket"
-    script: mas install 568494494
+#  - id: mas install Pocket
+#    type: command
+#    check_script: "mas list | grep Pocket"
+#    script: mas install 568494494
 
 # Set `${HOME}` as the default location for new Finder windows
 # 新しいウィンドウでデフォルトでホームフォルダを開く
