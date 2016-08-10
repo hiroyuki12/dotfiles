@@ -18,6 +18,14 @@ if [ "$?" -ne 0 ]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Install rbenv
+brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
+echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+source ~/.bash_profile
+rbenv install 2.2.2
+rbenv rehash
+rbenv global 2.2.2
+
 # Install serverkit and its dependencies
 sudo gem install bundler
 sudo bundle install > /dev/null
