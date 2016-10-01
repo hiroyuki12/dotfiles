@@ -78,6 +78,12 @@ resources:
     domain: com.apple.safari
     key: ShowFavoritesBar-v2
     value: 1
+  - type: defaults
+    key: InitialKeyRepeat
+    value: 15
+  - type: defaults
+    key: KeyRepeat
+    value: 2
     notify:
       - killall_Safari
 
