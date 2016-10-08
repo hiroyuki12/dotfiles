@@ -1,92 +1,39 @@
-nnoremap sf :new<Cr>:FuzzyFinderFile<Cr>
+" nnoremap sf :new<Cr>:FuzzyFinderFile<Cr>
 
-" http://hatena.g.hatena.ne.jp/hatenatech/20060515/1147682761
-"set nocompatible  " Use Vim defaults instead of 100% vi compatibility
-"set backspace=indent,eol,start  " more powerful backspacing
-"set nobackup    " Don't keep a backup file
-"set number      " 行番号を表示 :se nu  非表示 :se nonu  :h number
 set incsearch   " 検索文字を打ち込むと即検索する（インクリメンタルサーチ）
-"set wildmenu    " :e .v<TAB><TAB> した時に補完候補を上に表示
-"set list      " 改行に$を表示 :se list :se nolist
-"set expandtab
-"set tabstop=2
-"set softtabstop=2
-"set shiftwidth=2
-set ignorecase " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
-"set autoindent
-"set cindent
-"set smarttab
+set ignorecase  " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set laststatus=2  " need statusline
-"set statusline=%n\:\ %f\ %m\ %r%{&foldenable!=0?'[fen]':''}%=%l/%L\ (%p%%)\ %{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}
-" http://github.com/januswel/dotfiles/blob/68b7980885979acffd2be82a106032e6d2f9c5f4/.vimrc
 set statusline=%t\ %y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%r%m%=%c:%l/%L[%3p%%]
-
-"set cursorline   " :se cul  :se nocul  :h cursorli
-"set hidden " バッファが編集中でもその他のファイルを開けるように
-"set fileencoding=utf-8
-"set encoding=utf-8
-"set showmatch " 対応するカッコを強調表示(   ) 
-
 syntax on " color    /etc/vimrc(fedora)
-"colorscheme darkblue " darkblue はデフォルトでインストール済み
-"colorscheme desert
 
-" keymap
-" http://hatena.g.hatena.ne.jp/hatenatech/20060515/1147682761
-" ノーマル、ビジュアル、挿入時、コマンド入力時(:wq)にCtrl + lで抜ける
-" L が入力できないので l を入力して~で大文字に変換
-" 本来Lは画面の一番下にカーソル移動 一番上はH
 imap <C-l> <esc>
 map <C-l> <esc>
-"cnoremap <C-l> <C-C>
-" :w など入力時にCtrl + l でキャンセル
 cmap <C-l> <C-C>
-"inoremap L <ESC>
-"inoremap <C-l> <ESC>
-"inoremap <C-g> <ESC>
-" http://github.com/guyon/configs/tree/master/.vimrc
-" .vimrcの再読み込み
-"nnoremap ,vr :source $HOME/.vimrc<CR>
 nnoremap ,vr :source %<CR>
-" Ctrl + o でジャンプする前の位置に移動(gg,Shift + g,10 Shift + g)
-"map <C-z> <C-o>
-" Ctrl + k で行末までカット
 map <C-k> D
-" Space で半画面スクロール Ctrl + u で上へ半画面スクロール
 map <Space> <C-d>
-" 0で行頭。Ctrl + a で行頭 本来Ctrl + a は値の増加
-"map <C-a> 0
-" すべて選択 ggVG
-" すべてコピー ggyG
-" 行末までコピー y Ctrl + e
-" $ で行末。Ctrl + e で行末 本来Ctrl + e は1行下にスクロール 上はCtrl + y
-"map <C-e> $
-" Shift + c 行末までカットして挿入モード
-" command mode 時 tcsh風のキーバインドに
-cmap <C-A> <Home>
-cmap <C-E> <End>
+map <C-a> 0
+cmap <C-a> <Home>
+map <C-e> $
+cmap <C-e> <End>
 cmap <C-F> <Right>
 cmap <C-B> <Left>
 cmap <C-D> <Delete>
-" Ctrl + l で ESC(コマンド入力時(:wqとか))
-" ee で上書き保存 eで文字の末尾に移動が遅くなる
-"nnoremap ee :w<CR>
-" qq で上書き保存して終了 Shift + zz
 nnoremap qq :wq<CR>
-" :ls でbuffer一覧表示
-" :e .emacs で新しくbufferに開く
-"buffer operation
-"nnoremap sn :bn<CR>
-"nnoremap <C-T> :bn<CR>
-"nnoremap sp :bp<CR>
-"window operation
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap * *zzzv
+nnoremap # #zzzv
+nnoremap g* g*zzzv
+nnoremap g# g#zzzv
+
 " ssで分割 scで閉じる so
-"noremap ss <C-W>s
-"noremap sc <C-W>c
-"noremap so <C-W>o
+noremap ss <C-W>s
+noremap sc <C-W>c
+noremap so <C-W>o
 "move
 "tt で別のウィンドウへ移動 sjで下 siで上
-"noremap tt <C-W><C-W>
+noremap tt <C-W><C-W>
 "noremap sj <C-W>j
 "noremap si <C-W>k
 "resize +広げる -狭める
@@ -98,21 +45,9 @@ nnoremap qq :wq<CR>
 "noremap z0 1<C-W>_
 " z. で均等に
 "noremap z. <C-W>=
-" 表示行単位で行移動する 長い行で自動折り返した時用
-"nnoremap j gj
-"nnoremap k gk
+
 " b でブレース 対応する括弧(){}にジャンプ
-"nmap b %
-" http://d.hatena.ne.jp/guyon/20081230/1230648901
-" http://github.com/guyon/configs/tree/master/.vimrc
-" 検索時に画面中央にくるようにする
-" nzzを割り当てるとfold時の検索でnを押して次に進んだ場合に自動展開されない
-nnoremap n nzzzv
-nnoremap N Nzzzv
-nnoremap * *zzzv
-nnoremap # #zzzv
-nnoremap g* g*zzzv
-nnoremap g# g#zzzv
+nmap b %
 
 " 全角スペースを視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
@@ -196,6 +131,85 @@ set fileformats=unix,dos,mac
 if exists('&ambiwidth')
   set ambiwidth=double
 endif
+
+
+" comment out
+
+" http://hatena.g.hatena.ne.jp/hatenatech/20060515/1147682761
+"set nocompatible  " Use Vim defaults instead of 100% vi compatibility
+"set backspace=indent,eol,start  " more powerful backspacing
+"set nobackup    " Don't keep a backup file
+"set number      " 行番号を表示 :se nu  非表示 :se nonu  :h number
+"set wildmenu    " :e .v<TAB><TAB> した時に補完候補を上に表示
+"set list      " 改行に$を表示 :se list :se nolist
+"set expandtab
+"set tabstop=2
+"set softtabstop=2
+"set shiftwidth=2
+"set autoindent
+"set cindent
+"set smarttab
+"set statusline=%n\:\ %f\ %m\ %r%{&foldenable!=0?'[fen]':''}%=%l/%L\ (%p%%)\ %{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}
+" http://github.com/januswel/dotfiles/blob/68b7980885979acffd2be82a106032e6d2f9c5f4/.vimrc
+
+"set cursorline   " :se cul  :se nocul  :h cursorli
+"set hidden " バッファが編集中でもその他のファイルを開けるように
+"set fileencoding=utf-8
+"set encoding=utf-8
+"set showmatch " 対応するカッコを強調表示(   ) 
+
+"colorscheme darkblue " darkblue はデフォルトでインストール済み
+"colorscheme desert
+
+" keymap
+" http://hatena.g.hatena.ne.jp/hatenatech/20060515/1147682761
+" ノーマル、ビジュアル、挿入時、コマンド入力時(:wq)にCtrl + lで抜ける
+" L が入力できないので l を入力して~で大文字に変換
+" 本来Lは画面の一番下にカーソル移動 一番上はH
+"cnoremap <C-l> <C-C>
+" :w など入力時にCtrl + l でキャンセル
+"inoremap L <ESC>
+"inoremap <C-l> <ESC>
+"inoremap <C-g> <ESC>
+" http://github.com/guyon/configs/tree/master/.vimrc
+" .vimrcの再読み込み
+"nnoremap ,vr :source $HOME/.vimrc<CR>
+" Ctrl + o でジャンプする前の位置に移動(gg,Shift + g,10 Shift + g)
+"map <C-z> <C-o>
+" Ctrl + k で行末までカット
+" Space で半画面スクロール Ctrl + u で上へ半画面スクロール
+" 0で行頭。Ctrl + a で行頭 本来Ctrl + a は値の増加
+" すべて選択 ggVG
+" すべてコピー ggyG
+" 行末までコピー y Ctrl + e
+" $ で行末。Ctrl + e で行末 本来Ctrl + e は1行下にスクロール 上はCtrl + y
+"map <C-e> $
+" Shift + c 行末までカットして挿入モード
+" command mode 時 tcsh風のキーバインドに
+" Ctrl + l で ESC(コマンド入力時(:wqとか))
+" ee で上書き保存 eで文字の末尾に移動が遅くなる
+"nnoremap ee :w<CR>
+" qq で上書き保存して終了 Shift + zz
+" :ls でbuffer一覧表示
+" :e .emacs で新しくbufferに開く
+"buffer operation
+"nnoremap sn :bn<CR>
+"nnoremap <C-T> :bn<CR>
+"nnoremap sp :bp<CR>
+"window operation
+
+
+" 表示行単位で行移動する 長い行で自動折り返した時用
+"nnoremap j gj
+"nnoremap k gk
+
+" http://d.hatena.ne.jp/guyon/20081230/1230648901
+" http://github.com/guyon/configs/tree/master/.vimrc
+" 検索時に画面中央にくるようにする
+" nzzを割り当てるとfold時の検索でnを押して次に進んだ場合に自動展開されない
+
+
+
 
 " メモ memo
 " vimturor
