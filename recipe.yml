@@ -123,6 +123,10 @@ resources:
 #    type: command
 #    check_script: "mas list | grep Pocket"
 #    script: mas install 568494494
+#  - id: mas install ForkLift
+#    type: command
+#    check_script: "mas list | grep ForkLift"
+#    script: mas install 412448059
 
 # Set `${HOME}` as the default location for new Finder windows
 # 新しいウィンドウでデフォルトでホームフォルダを開く
