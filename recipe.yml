@@ -26,8 +26,8 @@ resources:
 #    name: electron
 #  - type: homebrew_cask_package
 #    name: google-japanese-ime
-  - type: homebrew_cask_package
-    name: karabiner
+#  - type: homebrew_cask_package
+#    name: karabiner
 #  - type: homebrew_cask_package
 #    name: skitch
 #  - type: homebrew_cask_package
@@ -99,6 +99,14 @@ resources:
 #  - type: command
 #    script: defaults write -g com.apple.trackpad.scaling -float 2.0
 
+  - id: mas install Wunderlist
+    type: command
+    check_script: "mas list | grep Wunderlist"
+    script: mas install 410628904
+  - id: mas install Pocket
+    type: command
+    check_script: "mas list | grep Pocket"
+    script: mas install 568494494
 #  - id: mas install CotEditor
 #    type: command
 #    check_script: "mas list | grep CotEditor"
@@ -107,10 +115,6 @@ resources:
 #    type: command
 #    check_script: "mas list | grep Xcode"
 #    script: mas install 497799835
-#  - id: mas install Wunderlist
-#    type: command
-#    check_script: "mas list | grep Wunderlist"
-#    script: mas install 410628904
 #  - id: mas install Twitter
 #    type: command
 #    check_script: "mas list | grep Twitter"
@@ -119,10 +123,6 @@ resources:
 #    type: command
 #    check_script: "mas list | grep Kobito"
 #    script: mas install 896624060
-#  - id: mas install Pocket
-#    type: command
-#    check_script: "mas list | grep Pocket"
-#    script: mas install 568494494
 #  - id: mas install ForkLift
 #    type: command
 #    check_script: "mas list | grep ForkLift"
@@ -137,26 +137,25 @@ resources:
 #  - type: command
 #    script: killall Finder
 
-  - type: karabiner
-    key: remap.jis_shiftSpace2toggle_kana_eisuu
-    value: 1
-    recheck_script: "true"
-  - type: karabiner
-    key: repeat.initial_wait
-    value: 200
-    recheck_script: "true"
-  - type: karabiner
-    key: repeat.wait
-    value: 30
-    recheck_script: "true"
+#  - type: karabiner
+#    key: remap.jis_shiftSpace2toggle_kana_eisuu
+#    value: 1
+#    recheck_script: "true"
+#  - type: karabiner
+#    key: repeat.initial_wait
+#    value: 200
+#    recheck_script: "true"
+#  - type: karabiner
+#    key: repeat.wait
+#    value: 30
+#    recheck_script: "true"
 
 #  - type: line
-  - type: nothing
-    path: /etc/sudoers
-    pattern: 'hiroyuki +ALL=\(ALL\) NOPASSWD: ALL'
-    line: "hiroyuki ALL=(ALL) NOPASSWD: ALL"
-    insert_before: "^#includedir"
-    validation_script: visudo -cf %{path}
+#    path: /etc/sudoers
+#    pattern: 'hiroyuki +ALL=\(ALL\) NOPASSWD: ALL'
+#    line: "hiroyuki ALL=(ALL) NOPASSWD: ALL"
+#    insert_before: "^#includedir"
+#    validation_script: visudo -cf %{path}
 
 # NeoBundle (easy-motion)
   - type: git
