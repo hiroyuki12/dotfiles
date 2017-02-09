@@ -20,4 +20,5 @@ alias a='serverkit apply recipe.yml'
 
 alias cls='clear'
 
+alias tap='osascript Desktop/tapToClickOn.scpt'
 eval "$(rbenv init -)"
