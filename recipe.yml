@@ -38,6 +38,8 @@ resources:
 #    name: virtualbox
 #  - type: homebrew_cask_package
 #    name: visual-studio-code
+  - type: homebrew_cask_package
+    name: mounty
 
   # defaults
     type: defaults
@@ -170,6 +172,10 @@ resources:
   - type: command
     script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
 
+# show Favorites bar (safari)
+  - type: command
+    script: osascript ~/github/dotfiles/appleScript/CorrectSpellingOff.scpt
+            
 # ln .vimrc, .bash_profile, .gitconfig
   - type: symlink
     source: /Users/hiroyuki/.vimrc
