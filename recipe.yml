@@ -44,11 +44,6 @@ resources:
     domain: com.apple.finder
     key: ShowStatusBar
     value: 1
-  - id: TrackingSpeed_trackpad  # need logout , command + shift + q
-    type: defaults
-    domain: Apple Global Domain 
-    key: com.apple.trackpad.scaling
-    value: 2.5
   - id: ShowPath_finder # タイトルバーにパスを表示
     type: defaults
     domain: com.apple.finder
