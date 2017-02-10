@@ -168,6 +168,10 @@ resources:
     repository: https://github.com/hiroyuki12/dotfiles.git
     state: updated
 
+# set Tap to click on
+  - type: command
+    script: osascript ~/github/dotfiles/appleScript/tapToClickOn.scpt
+
 # ln .vimrc, .bash_profile, .gitconfig
   - type: symlink
     source: /Users/hiroyuki/.vimrc
