@@ -168,9 +168,14 @@ resources:
     repository: https://github.com/hiroyuki12/dotfiles.git
     state: updated
 
+  ## Apple Script
 # set Tap to click on
   - type: command
     script: osascript ~/github/dotfiles/appleScript/tapToClickOn.scpt
+
+# change Dsiaplay Resolution
+  - type: command
+    script: osascript ~/github/dotfiles/appleScript/changeDisplayResolution.scpt
 
 # ln .vimrc, .bash_profile, .gitconfig
   - type: symlink
