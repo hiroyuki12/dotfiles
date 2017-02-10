@@ -69,10 +69,6 @@ resources:
     domain: com.apple.Terminal
     key: Startup Window Settings
     value: Basic2
-  - type: defaults  # need restart safari
-    domain: com.apple.safari
-    key: ShowFavoritesBar-v2
-    value: 1
   - type: defaults
     key: InitialKeyRepeat
     value: 15
