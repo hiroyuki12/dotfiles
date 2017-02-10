@@ -172,6 +172,10 @@ resources:
   - type: command
     script: osascript ~/github/dotfiles/appleScript/changeDisplayResolution.scpt
 
+# show Favorites bar (safari)
+  - type: command
+    script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
+
 # ln .vimrc, .bash_profile, .gitconfig
   - type: symlink
     source: /Users/hiroyuki/.vimrc
