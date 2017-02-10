@@ -85,8 +85,6 @@ resources:
       - killall_Dock
   - type: command
     script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
-  - type: command
-    script: defaults -currentHost write -globalDomain com.apple.mouse.tapBehavior -int 1
 #  - type: command
 #    script: defaults write -g com.apple.trackpad.scaling -float 2.0
 
