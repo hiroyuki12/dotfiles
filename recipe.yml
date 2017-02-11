@@ -98,10 +98,10 @@ resources:
     type: command
     check_script: "mas list | grep Pocket"
     script: mas install 568494494
-#  - id: mas install CotEditor
-#    type: command
-#    check_script: "mas list | grep CotEditor"
-#    script: mas install 1024640650
+  - id: mas install CotEditor
+    type: command
+    check_script: "mas list | grep CotEditor"
+    script: mas install 1024640650
 #  - id: mas install Xcode
 #    type: command
 #    check_script: "mas list | grep Xcode"
