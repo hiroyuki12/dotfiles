@@ -85,6 +85,9 @@ resources:
     script: defaults write "com.apple.dock" "orientation" -string "left"
     notiry:
       - killall_Dock
+# New windows points to home (finder)
+  - type: command
+    script: defaults write com.apple.finder NewWindowTarget -string "PfHm"
   - type: command
     script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 #  - type: command
