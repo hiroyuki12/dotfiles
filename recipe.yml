@@ -172,10 +172,14 @@ resources:
   - type: command
     script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
 
-# show Favorites bar (safari)
+# change caps lock to command
+  - type: command
+    script: osascript ~/github/dotfiles/appleScript/modifierKeyCapsLockToCommand.scpt
+
+# change correct spelling off
   - type: command
     script: osascript ~/github/dotfiles/appleScript/CorrectSpellingOff.scpt
-            
+
 # ln .vimrc, .bash_profile, .gitconfig
   - type: symlink
     source: /Users/hiroyuki/.vimrc
