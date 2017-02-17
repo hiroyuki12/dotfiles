@@ -82,28 +82,36 @@ resources:
 
   # command
   - type: command
+    check_script: defaults find orientation | grep left
     script: defaults write "com.apple.dock" "orientation" -string "left"
     notiry:
       - killall_Dock
 # New windows points to home (finder)
   - type: command
+    check_script: defaults find NewWindowTarget | grep PfHm
     script: defaults write com.apple.finder NewWindowTarget -string "PfHm"
   - type: command
     script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 #  - type: command
 #    script: defaults write -g com.apple.trackpad.scaling -float 2.0
 
+# Three finger drag on
+  - type: command
+    script: defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
+  - type: command
+    script: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
+
   - id: mas install Wunderlist
     type: command
-    check_script: "mas list | grep Wunderlist"
+    check_script: mas list | grep Wunderlist
     script: mas install 410628904
   - id: mas install Pocket
     type: command
-    check_script: "mas list | grep Pocket"
+    check_script: mas list | grep Pocket
     script: mas install 568494494
   - id: mas install CotEditor
     type: command
-    check_script: "mas list | grep CotEditor"
+    check_script: mas list | grep CotEditor
     script: mas install 1024640650
 #  - id: mas install Xcode
 #    type: command
@@ -165,6 +173,7 @@ resources:
   ## Apple Script
 # set Tap to click on
   - type: command
+    check_script: defaults find Clicking | grep 1
     script: osascript ~/github/dotfiles/appleScript/tapToClickOn.scpt
 
 # change Dsiaplay Resolution
@@ -173,6 +182,7 @@ resources:
 
 # show Favorites bar (safari)
   - type: command
+    check_script: defaults find ShowFavoritesBar | grep 1
     script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
 
 # change caps lock to command
@@ -181,6 +191,7 @@ resources:
 
 # change correct spelling off
   - type: command
+    check_script: defaults find AutomaticSpellingCorrection | grep 0
     script: osascript ~/github/dotfiles/appleScript/CorrectSpellingOff.scpt
 
 # ln .vimrc, .bash_profile, .gitconfig
