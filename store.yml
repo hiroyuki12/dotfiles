@@ -8,6 +8,8 @@ resources:
 #    name: packer
 #  - type: package
 #    name: hub  # hub browse
+  - type: package
+    name: argon/mas/mas
 #  - type: package
 #    name: go
 #  - type: package
@@ -99,6 +101,34 @@ resources:
   - type: command
     script: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 
+  - id: mas install Wunderlist
+    type: command
+    check_script: mas list | grep Wunderlist
+    script: mas install 410628904
+  - id: mas install Pocket
+    type: command
+    check_script: mas list | grep Pocket
+    script: mas install 568494494
+  - id: mas install CotEditor
+    type: command
+    check_script: mas list | grep CotEditor
+    script: mas install 1024640650
+#  - id: mas install Xcode
+#    type: command
+#    check_script: "mas list | grep Xcode"
+#    script: mas install 497799835
+#  - id: mas install Twitter
+#    type: command
+#    check_script: "mas list | grep Twitter"
+#    script: mas install 409789998
+#  - id: mas install Kobito
+#    type: command
+#    check_script: "mas list | grep Kobito"
+#    script: mas install 896624060
+#  - id: mas install ForkLift
+#    type: command
+#    check_script: "mas list | grep ForkLift"
+#    script: mas install 412448059
 
 # Set `${HOME}` as the default location for new Finder windows
 # 新しいウィンドウでデフォルトでホームフォルダを開く
