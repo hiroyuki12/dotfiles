@@ -1,7 +1,7 @@
 resources:
   # brew
-#  - type: package
-#    name: ansible
+  - type: package
+    name: ansible
   - type: package
     name: caskroom/cask/brew-cask
 #  - type: package
@@ -95,8 +95,10 @@ resources:
 
 # Three finger drag on
   - type: command
+    check_script: defaults find TrackpadThreeFingerDrag | grep 1
     script: defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerDrag -bool true
   - type: command
+    check_script: defaults find TrackpadThreeFingerDrag | grep 1
     script: defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerDrag -bool true
 
 

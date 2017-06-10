@@ -5,6 +5,7 @@ resources:
   - type: package
     name: argon/mas/mas
 
+  # mas
   - id: mas install Wunderlist
     type: command
     check_script: mas list | grep Wunderlist
