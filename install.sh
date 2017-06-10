@@ -27,18 +27,13 @@ rbenv rehash
 rbenv global 2.4.1
 
 # Install bundler,serverkit and its dependencies
-sudo gem install bundler
+sudo which bundle > /dev/null || sudo gem install bundler
 sudo bundle install > /dev/null
 
 # Run installer
 bundle exec serverkit apply recipe.yml
 
-# install bundler serverkit
-#cd ~/github/dotfiles
-#sudo which bundle > /dev/null || sudo gem install bundler
-#sudo which serverkit > /dev/null || sudo gem install serverkit
 open Basic2.terminal  # add Terminal Profile
-#serverkit apply recipe.yml
 
 # Move to original path
 popd > /dev/null
