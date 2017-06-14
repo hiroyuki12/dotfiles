@@ -50,29 +50,29 @@ noremap tt <C-W><C-W>
 nmap b %
 
 " 全角スペースを視覚化
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
-match ZenkakuSpace /　/
-" http://d.hatena.ne.jp/magicalhat/20081223/1230013283
-if has("autocmd")
-  filetype plugin indent on
-  autocmd FileType perl,cgi :compiler perl  "コンパイラの指定
-
-  " テンプレ http://d.hatena.ne.jp/higeorange/20071003/1191356790
-  "autocmd BufNewFile *.html 0r ~/.vim/templates/skel.html
-
-  " filetypeをセット http://d.hatena.ne.jp/rdera/20090110/1231565387
-  " autocmd BufNewFile,BufReadPost ~/.zfunc/* :set ft=zsh
-
-  " カーソルの位置を復元 Ubuntu 8.10
-  " http://d.hatena.ne.jp/chonmagejiro/20080815/1218780398
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-endif
+"highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
+"match ZenkakuSpace /　/
+"" http://d.hatena.ne.jp/magicalhat/20081223/1230013283
+"if has("autocmd")
+"  filetype plugin indent on
+"  autocmd FileType perl,cgi :compiler perl  "コンパイラの指定
+"
+"  " テンプレ http://d.hatena.ne.jp/higeorange/20071003/1191356790
+"  "autocmd BufNewFile *.html 0r ~/.vim/templates/skel.html
+"
+"  " filetypeをセット http://d.hatena.ne.jp/rdera/20090110/1231565387
+"  " autocmd BufNewFile,BufReadPost ~/.zfunc/* :set ft=zsh
+"
+"  " カーソルの位置を復元 Ubuntu 8.10
+"  " http://d.hatena.ne.jp/chonmagejiro/20080815/1218780398
+"  " When editing a file, always jump to the last known cursor position.
+"  " Don't do it when the position is invalid or when inside an event handler
+"  " (happens when dropping a file on gvim).
+"  autocmd BufReadPost *
+"    \ if line("'\"") > 0 && line("'\"") <= line("$") |
+"    \   exe "normal g`\"" |
+"    \ endif
+"endif
 
 " 文字コードの自動認識
 " http://www.kawaz.jp/pukiwiki/?vim#cb691f26
@@ -320,4 +320,4 @@ endif
 " Shift + q  Exモード
 " 保存 :w。保存して終了 :wq。保存せず終了 :q!。
 
-filetype plugin indent on
+"filetype plugin indent on
