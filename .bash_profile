@@ -16,7 +16,7 @@ alias sea='brew search'
 alias b='brew install'
 
 alias d='cd ~/github/dotfiles'
-alias a='serverkit apply recipe.yml'
+alias a='serverkit apply recipe.yml.erb'
 
 alias cls='clear'
 
