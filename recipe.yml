@@ -1,4 +1,6 @@
 resources:
+  - type: command
+    script: brew update
   # brew
   - type: package
     name: ansible
