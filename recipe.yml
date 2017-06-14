@@ -162,9 +162,9 @@ resources:
     script: osascript ~/github/dotfiles/appleScript/modifierKeyCapsLockToCommand.scpt
 
 # change correct spelling off
-  - type: command
-    check_script: defaults find AutomaticSpellingCorrection | grep 0
-    script: osascript ~/github/dotfiles/appleScript/CorrectSpellingOff.scpt
+#  - type: command
+#    check_script: defaults find AutomaticSpellingCorrection | grep 0
+#    script: osascript ~/github/dotfiles/appleScript/CorrectSpellingOff.scpt
 
 # ln .vimrc, .bash_profile, .gitconfig
   - type: symlink
