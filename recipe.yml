@@ -153,9 +153,9 @@ resources:
     script: osascript ~/github/dotfiles/appleScript/changeDisplayResolution.scpt
 
 # show Favorites bar (safari)
-  - type: command
-    check_script: defaults find ShowFavoritesBar | grep 1
-    script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
+#  - type: command
+#    check_script: defaults find ShowFavoritesBar | grep 1
+#    script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
 
 # change caps lock to command
   - type: command
