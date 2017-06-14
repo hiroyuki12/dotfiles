@@ -178,14 +178,14 @@ resources:
     destination: /Users/hiroyuki/github/dotfiles/.gitconfig
 
   # rbenv_ruby
-  - type: rbenv_ruby
-    #version: 2.5.0-dev
-    version: 2.4.1
-    global: true
-    rbenv_executable_path: /usr/local/bin/rbenv
-    user: hiroyuki
-    dependencies: true
-    profile_path: /Users/hiroyuki/.bash_profile
+  #  - type: rbenv_ruby
+  #    #version: 2.5.0-dev
+  #    version: 2.4.1
+  #    global: true
+  #    rbenv_executable_path: /usr/local/bin/rbenv
+  #    user: hiroyuki
+  #    dependencies: true
+  #    profile_path: /Users/hiroyuki/.bash_profile
 
 handlers:
   - id: killall_Finder
