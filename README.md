@@ -1,4 +1,4 @@
-# dotfiles
+# dotfiles [![Build Status](https://travis-ci.org/hiroyuki12/dotfiles.svg?branch=master)](https://travis-ci.org/hiroyuki12/dotfiles)
 
 sudo gem install rebuild
 rebuild hiroyuki12/dotfiles
