@@ -31,7 +31,7 @@ sudo which bundle > /dev/null || sudo gem install bundler
 sudo bundle install > /dev/null
 
 # Run installer
-bundle exec serverkit apply recipe.yml
+bundle exec serverkit apply recipe.yml.erb
 
 open Basic2.terminal  # add Terminal Profile
 
