@@ -21,3 +21,4 @@ alias a='serverkit apply recipe.yml'
 alias cls='clear'
 
 eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/bin:$PATH"
