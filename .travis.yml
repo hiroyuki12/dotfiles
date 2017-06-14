@@ -2,4 +2,4 @@ language: objective-c
 os:
   - osx
 script:
-  - bundle exec serverkit apply recipe.yml
+  - bundle exec serverkit apply recipe.yml.erb
