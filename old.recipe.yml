@@ -6,6 +6,7 @@ resources:
     name: ansible
   - type: package
     name: caskroom/cask/brew-cask
+    name: peco
 #  - type: package
 #    name: packer
 #  - type: package
