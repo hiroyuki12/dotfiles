@@ -16,7 +16,12 @@ alias sea='brew search'
 alias b='brew install'
 
 alias d='cd ~/github/dotfiles'
-alias a='serverkit apply recipe.yml.erb'
+alias a='time serverkit apply recipe.yml.erb'
+
+alias s='cd ~/github/spec/spec/localhost'
+alias ss='time rake'
+
+alias t='cd /usr/local/Cellar/tomcat/8.5.15/libexec/webapps'
 
 alias cls='clear'
 

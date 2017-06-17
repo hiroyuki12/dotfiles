@@ -1,9 +1,22 @@
 resources:
   - type: command
     script: brew update
+
   # brew
   - type: package
-    name: ansible
+    name: peco
+#  - type: package
+#    name: ansible
+#  - type: package
+#    name: sphinx
+#  - type: package
+#    name: nginx
+#  - type: package
+#    name: tomcat
+#  - type: package
+#    name: mysql
+#  - type: package
+#    name: docker-compose
 #  - type: package
 #    name: caskroom/cask/brew-cask
 #  - type: package
@@ -16,12 +29,18 @@ resources:
 #    name: mackup
 
   # brew cask
+  - type: homebrew_cask_package
+    name: dropbox
+  - type: homebrew_cask_package
+    name: mounty
 #  - type: homebrew_cask_package
 #    name: alfred
 #  - type: homebrew_cask_package
 #    name: atom
-  - type: homebrew_cask_package
-    name: dropbox
+#  - type: homebrew_cask_package
+#    name: docker-toolbox
+#  - type: homebrew_cask_package
+#    name: java
 #  - type: homebrew_cask_package
 #    name: electron
 #  - type: homebrew_cask_package
@@ -38,8 +57,6 @@ resources:
 #    name: virtualbox
 #  - type: homebrew_cask_package
 #    name: visual-studio-code
-  - type: homebrew_cask_package
-    name: mounty
 
   # defaults
     type: defaults
@@ -134,10 +151,11 @@ resources:
 #    validation_script: visudo -cf %{path}
 
 # NeoBundle (easy-motion)
-  - type: git
-    path: /Users/<%= ENV["USER"] %>/.vim/bundle/neobundle.vim
-    repository: https://github.com/Shougo/neobundle.vim
-    state: updated
+#  - type: git
+#    path: /Users/<%= ENV["USER"] %>/.vim/bundle/neobundle.vim
+#    repository: https://github.com/Shougo/neobundle.vim
+#    state: updated
+
 # dotfiles
   - type: git
     path: /Users/<%= ENV["USER"] %>/github/dotfiles
