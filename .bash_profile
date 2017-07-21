@@ -25,5 +25,10 @@ alias t='cd /usr/local/Cellar/tomcat/8.5.15/libexec/webapps'
 
 alias cls='clear'
 
+alias masw='mas install 410628904'
+alias masp='mas install 568494494'
+alias masx='mas install 497799835'
+alias masc='mas install 1024640650'
+
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/bin:$PATH"
