@@ -22,9 +22,9 @@ fi
 brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
-rbenv install 2.4.1
+rbenv install 2.5.0
 rbenv rehash
-rbenv global 2.4.1
+rbenv global 2.5.0
 
 # Install bundler,serverkit and its dependencies
 sudo which bundle > /dev/null || sudo gem install bundler
