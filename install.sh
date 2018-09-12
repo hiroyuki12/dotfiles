@@ -8,6 +8,26 @@ curl -LSfs -o /tmp/tapToClickOn.scpt https://github.com/hiroyuki12/dotfiles/raw/
 osascript /tmp/tapToClickOn.scpt
 rm /tmp/tapToClickOn.scpt
 
+# changeDisplayResolution
+curl -LSfs -o /tmp/changeDisplayResolution.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDisplayResolution.scpt
+osascript /tmp/changeDisplayResolution.scpt
+rm /tmp/changeDisplayResolution.scpt
+
+# change caps lock to command 
+curl -LSfs -o /tmp/modifierKeyCapsLockToCommand.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/modifierKeyCapsLockToCommand.scpt
+osascript /tmp/modifierKeyCapsLockToCommand.scpt
+rm /tmp/modifierKeyCapsLockToCommand.scpt
+
+# Key Repeat Fast, Delay Util Repeat Short
+curl -LSfs -o /tmp/KeyRepeatFast.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/KeyRepeatFast.scpt
+osascript /tmp/KeyRepeatFast.scpt
+rm /tmp/KeyRepeatFast.scpt
+
+# three finger drag
+curl -LSfs -o /tmp/threeFingerDrag.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/threeFingerDrag.scpt
+osascript /tmp/threeFingerDrag.scpt
+rm /tmp/threeFingerDrag.scpt
+
 # Download zipped installer
 curl -LSfs -o ${tempfile} https://github.com/hiroyuki12/dotfiles/archive/master.zip
 
