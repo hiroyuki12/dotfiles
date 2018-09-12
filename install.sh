@@ -3,6 +3,11 @@
 tempfile=/tmp/dotfiles.zip
 workspace=/tmp/dotfiles
 
+# tapToClickOn
+curl -LSfs -o /tmp/tapToClickOn.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/tapToClickOn.scpt
+osascript /tmp/tapToClickOn.scpt
+rm /tmp/tapToClickOn.scpt
+
 # Download zipped installer
 curl -LSfs -o ${tempfile} https://github.com/hiroyuki12/dotfiles/archive/master.zip
 
