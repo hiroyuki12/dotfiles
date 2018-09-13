@@ -58,7 +58,7 @@ sudo bundle install > /dev/null
 # Run installer
 bundle exec serverkit apply recipe.yml.erb
 
-open Basic2.terminal  # add Terminal Profile
+# open Basic2.terminal  # add Terminal Profile
 
 # Move to original path
 popd > /dev/null
