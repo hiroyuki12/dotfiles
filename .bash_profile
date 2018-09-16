@@ -14,6 +14,7 @@ alias ls='ls -G'
 
 alias sea='brew search'
 alias b='brew install'
+alias c='brew cask install'
 
 alias d='cd ~/github/dotfiles'
 alias a='time serverkit apply recipe.yml.erb'
@@ -33,3 +34,4 @@ alias masc='mas install 1024640650'
 
 eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
