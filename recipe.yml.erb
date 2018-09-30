@@ -80,14 +80,6 @@ resources:
     value: 100
     notify:
       - killall_Dock
-  - type: defaults
-    domain: com.apple.Terminal
-    key: Default Window Settings
-    value: Basic2
-  - type: defaults
-    domain: com.apple.Terminal
-    key: Startup Window Settings
-    value: Basic2
 #  - type: defaults
 #    key: InitialKeyRepeat
 #    value: 15
@@ -214,6 +206,17 @@ resources:
   #    dependencies: true
   #    profile_path: /Users/hiroyuki/.bash_profile
 
+  - type: defaults
+    domain: com.apple.Terminal
+    key: Default Window Settings
+    value: Basic2
+  - type: defaults
+    domain: com.apple.Terminal
+    key: Startup Window Settings
+    value: Basic2
+    notify:
+      - killall_Terminal
+
 handlers:
   - id: killall_Finder
     type: command
@@ -224,4 +227,7 @@ handlers:
   - id: killall_Safari
     type: command
     script: killall Safari
+  - id: killall_Terminal
+    type: command
+    script: killall Terminal
 
