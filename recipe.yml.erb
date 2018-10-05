@@ -96,11 +96,11 @@ resources:
     notiry:
       - killall_Dock
 # New windows points to home (finder)
-  - type: command
-    check_script: defaults find NewWindowTarget | grep PfHm
-    script: defaults write com.apple.finder NewWindowTarget -string "PfHm"
-  - type: command
-    script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
+  #- type: command
+  #  check_script: defaults find NewWindowTarget | grep PfHm
+  #  script: defaults write com.apple.finder NewWindowTarget -string "PfHm"
+  #- type: command
+  #  script: sudo defaults write /Library/Preferences/com.apple.alf globalstate -int 1
 #  - type: command
 #    script: defaults write -g com.apple.trackpad.scaling -float 2.0
 
@@ -177,9 +177,9 @@ resources:
 #    script: osascript ~/github/dotfiles/appleScript/KeyRepeatFast.scpt
 
 # change correct spelling off
-  - type: command
+#  - type: command
 #    check_script: defaults find AutomaticSpellingCorrection | grep 0
-    script: osascript ~/github/dotfiles/appleScript/CorrectSpellingOff.scpt
+#    script: osascript ~/github/dotfiles/appleScript/CorrectSpellingOff.scpt
 
 # three finger drag
 #  - type: command

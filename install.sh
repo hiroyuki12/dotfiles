@@ -33,6 +33,17 @@ curl -LSfs -o /tmp/threeFingerDrag.scpt https://github.com/hiroyuki12/dotfiles/r
 osascript /tmp/threeFingerDrag.scpt
 rm /tmp/threeFingerDrag.scpt
 
+# correct spelling off
+curl -LSfs -o /tmp/CorrectSpellingOff.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/CorrectSpellingOff.scpt
+osascript /tmp/CorrectSpellingOff.scpt
+rm /tmp/CorrectSpellingOff.scpt
+
+# change dock position left
+curl -LSfs -o /tmp/ChangeDockPositionLeft.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/ChangeDockPositionLeft.scpt
+osascript /tmp/ChangeDockPositionLeft.scpt
+rm /tmp/ChangeDockPositionLeft.scpt
+
+
 break;
 ;;
 [Nn]* )
