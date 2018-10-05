@@ -39,9 +39,9 @@ osascript /tmp/CorrectSpellingOff.scpt
 rm /tmp/CorrectSpellingOff.scpt
 
 # change dock position left
-curl -LSfs -o /tmp/ChangeDockPositionLeft.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/ChangeDockPositionLeft.scpt
-osascript /tmp/ChangeDockPositionLeft.scpt
-rm /tmp/ChangeDockPositionLeft.scpt
+curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDockPositionLeft.scpt
+osascript /tmp/changeDockPositionLeft.scpt
+rm /tmp/changeDockPositionLeft.scpt
 
 
 break;
