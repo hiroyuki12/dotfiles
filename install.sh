@@ -48,6 +48,11 @@ curl -LSfs -o /tmp/changeInputSourceControlJ.scpt https://github.com/hiroyuki12/
 osascript /tmp/changeInputSourceControlJ.scpt
 rm /tmp/changeInputSourceControlJ.scpt
 
+# install mas 1.4.2
+curl -LSfs -o /tmp/mas-cli.zip https://github.com/mas-cli/mas/releases/download/v1.4.2/mas-cli.zip
+unzip /tmp/mas-cli.zip
+sudo mv mas /usr/local/bin/mas
+rm /tmp/mas-cli.zip
 
 break;
 ;;
