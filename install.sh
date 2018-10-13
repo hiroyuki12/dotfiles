@@ -43,6 +43,11 @@ curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dot
 osascript /tmp/changeDockPositionLeft.scpt
 rm /tmp/changeDockPositionLeft.scpt
 
+# change input source Control J
+curl -LSfs -o /tmp/changeInputSourceControlJ.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeInputSourceControlJ.scpt
+osascript /tmp/changeInputSourceControlJ.scpt
+rm /tmp/changeInputSourceControlJ.scpt
+
 
 break;
 ;;
