@@ -22,10 +22,10 @@ alias a='time serverkit apply recipe.yml.erb'
 alias cls='clear'
 
 alias masmas='brew install mas'
-alias masw='mas install 410628904'
-alias masp='mas install 568494494'
-alias masx='mas install 497799835'
-alias masc='mas install 1024640650'
+alias masw='time mas install 410628904'
+alias masp='time mas install 568494494'
+alias masx='time mas install 497799835'
+alias masc='time mas install 1024640650'
 
 alias q='exit'
 
