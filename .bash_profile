@@ -19,11 +19,6 @@ alias c='brew cask install'
 alias d='cd ~/github/dotfiles'
 alias a='time serverkit apply recipe.yml.erb'
 
-alias s='cd ~/github/spec/spec/localhost'
-alias ss='time rake'
-
-alias t='cd /usr/local/Cellar/tomcat/8.5.15/libexec/webapps'
-
 alias cls='clear'
 
 alias masmas='brew install mas'
@@ -31,6 +26,8 @@ alias masw='mas install 410628904'
 alias masp='mas install 568494494'
 alias masx='mas install 497799835'
 alias masc='mas install 1024640650'
+
+alias q='exit'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
