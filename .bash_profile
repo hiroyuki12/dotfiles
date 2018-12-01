@@ -32,8 +32,6 @@ alias masp='mas install 568494494'
 alias masx='mas install 497799835'
 alias masc='mas install 1024640650'
 
-alias ci='osascript ~/github/dotfiles/appleScript/changeInputSourceControlJ.scpt'
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 eval "$(rbenv init -)"
