@@ -89,9 +89,9 @@ case $Answer in
 brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
 echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 source ~/.bash_profile
-rbenv install 2.5.1
+rbenv install 2.6.2
 rbenv rehash
-rbenv global 2.5.1
+rbenv global 2.6.2
 
 break;
 ;;
