@@ -6,6 +6,7 @@ alias gp='git push'
 alias gs='git status'
 alias ga='git add'
 alias gl='git log'
+alias glp='git log -p'
 alias gr='git checkout HEAD'
 
 alias ll='ls -l'
