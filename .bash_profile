@@ -27,7 +27,9 @@ alias masw='time mas install 410628904'
 alias masp='time mas install 568494494'
 alias masx='time mas install 497799835'
 alias masc='time mas install 1024640650'
+alias masn='time mas install 450664466'
 
+alias bcode='time b Caskroom/cask/visual-studio-code'
 alias q='exit'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
