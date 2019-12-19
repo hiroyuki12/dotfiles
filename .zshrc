@@ -1,9 +1,13 @@
-#export PS1="\[\033[32m\]\w\[\033[0m\] $ "
-export PS1="$ "
+autoload colors
+colors
+PS1="%{$fg[green]%}%~%(!.#. %{$reset_color%}$) "
+#SPROMPT="%{$fg[red]%}correct: %R -> %r [nyae]? %{$reset_color%}"
+#RPROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}"
 
 alias gd='git diff'
 alias gc='git commit'
 alias gp='git push'
+alias gpu='git pull'
 alias gs='git status'
 alias ga='git add'
 alias gl='git log'
