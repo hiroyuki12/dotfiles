@@ -204,6 +204,10 @@ resources:
   - type: symlink
     source: /Users/<%= ENV["USER"] %>/.netrc
     destination: /Volumes/share/Mac/.netrc
+  - type: symlink
+    source: /Users/<%= ENV["USER"] %>/Desktop/share
+    destination: /Volumes/share
+
 
   # rbenv_ruby
   #  - type: rbenv_ruby
