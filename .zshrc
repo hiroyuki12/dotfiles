@@ -39,5 +39,6 @@ alias bcode='time b Caskroom/cask/visual-studio-code'
 alias q='exit'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=~/development/flutter/bin:$PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 eval "$(rbenv init -)"
