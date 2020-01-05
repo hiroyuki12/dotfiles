@@ -24,6 +24,7 @@ alias c='brew cask install'
 
 alias d='cd ~/github/dotfiles'
 alias a='time serverkit apply recipe.yml.erb'
+alias a1='osascript ~/github/dotfiles/appleScript/changeInputSourceControlJ.scpt'
 
 alias cls='clear'
 
