@@ -12,7 +12,8 @@ alias gs='git status'
 alias ga='git add'
 alias gl='git log'
 alias glp='git log -p'
-alias gr='git checkout HEAD'
+#alias gr='git checkout HEAD'
+alias gche='git checkout'
 
 alias ll='ls -l'
 alias la='ls -a'
@@ -43,3 +44,4 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH=~/development/flutter/bin:$PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 eval "$(rbenv init -)"
+export PATH=~/git/flutter/bin:$PATH
