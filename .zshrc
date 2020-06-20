@@ -22,6 +22,7 @@ alias ls='ls -G'
 alias sea='brew search'
 alias b='brew install'
 alias c='brew cask install'
+alias cov='cd ~/github/covid19'
 
 alias d='cd ~/github/dotfiles'
 alias a='time serverkit apply recipe.yml.erb'
