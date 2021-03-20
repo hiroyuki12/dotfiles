@@ -87,7 +87,7 @@ case $Answer in
 
 # Install rbenv
 brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
+echo 'eval "$(rbenv init -)"' >> ~/.zsh_profile
 source ~/.bash_profile
 rbenv install 3.0.0
 rbenv rehash
@@ -110,7 +110,13 @@ case $Answer in
   '' | [Yy]* )
 
 # Install bundler,serverkit and its dependencies
-sudo which bundle > /dev/null || sudo gem install bundler
+sudo which bundle > /dev/null || sudo gem install bundler:1.17.2
+sudo gem install serverkit
+sudo gem install serverkit-atom
+sudo gem install serverkit-defaults
+sudo gem install serverkit-homebrew
+sudo gem install serverkit-karabiner
+sudo gem install serverkit-rbenv
 sudo bundle install > /dev/null
 
 # Run installer
