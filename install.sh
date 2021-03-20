@@ -87,11 +87,11 @@ case $Answer in
 
 # Install rbenv
 brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
-echo 'eval "$(rbenv init -)"' >> ~/.zsh_profile
-source ~/.bash_profile
-rbenv install 3.0.0
-rbenv rehash
-rbenv global 3.0.0
+#echo 'eval "$(rbenv init -)"' >> ~/.zsh_profile
+#source ~/.bash_profile
+#rbenv install 3.0.0
+#rbenv rehash
+#rbenv global 3.0.0
 
 break;
 ;;
