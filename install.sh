@@ -24,9 +24,9 @@ osascript /tmp/modifierKeyCapsLockToCommand.scpt
 rm /tmp/modifierKeyCapsLockToCommand.scpt
 
 # Key Repeat Fast, Delay Util Repeat Short
-curl -LSfs -o /tmp/KeyRepeatFast.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/KeyRepeatFast.scpt
-osascript /tmp/KeyRepeatFast.scpt
-rm /tmp/KeyRepeatFast.scpt
+#curl -LSfs -o /tmp/KeyRepeatFast.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/KeyRepeatFast.scpt
+#osascript /tmp/KeyRepeatFast.scpt
+#rm /tmp/KeyRepeatFast.scpt
 
 # three finger drag
 #curl -LSfs -o /tmp/threeFingerDrag.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/threeFingerDrag.scpt
@@ -121,6 +121,8 @@ sudo bundle install > /dev/null
 
 # Run installer
 bundle exec serverkit apply recipe.yml.erb
+
+automator -v /Users/hiroyuki/github/dotfiles/automator/KeyRepeatFast.app
 
 break;
 ;;
