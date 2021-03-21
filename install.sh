@@ -29,9 +29,9 @@ osascript /tmp/KeyRepeatFast.scpt
 rm /tmp/KeyRepeatFast.scpt
 
 # three finger drag
-curl -LSfs -o /tmp/threeFingerDrag.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/threeFingerDrag.scpt
-osascript /tmp/threeFingerDrag.scpt
-rm /tmp/threeFingerDrag.scpt
+#curl -LSfs -o /tmp/threeFingerDrag.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/threeFingerDrag.scpt
+#osascript /tmp/threeFingerDrag.scpt
+#rm /tmp/threeFingerDrag.scpt
 
 # correct spelling off
 curl -LSfs -o /tmp/CorrectSpellingOff.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/CorrectSpellingOff.scpt
