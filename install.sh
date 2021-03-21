@@ -80,29 +80,29 @@ if [ "$?" -ne 0 ]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-while true; do
-read -p 'Now install rbenv? [Y/n]' Answer
-case $Answer in
-  '' | [Yy]* )
+#while true; do
+#read -p 'Now install rbenv? [Y/n]' Answer
+#case $Answer in
+#  '' | [Yy]* )
 
 # Install rbenv
-brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
+#brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
 #echo 'eval "$(rbenv init -)"' >> ~/.zsh_profile
 #source ~/.bash_profile
 #rbenv install 3.0.0
 #rbenv rehash
 #rbenv global 3.0.0
 
-break;
-;;
-[Nn]* )
-  echo "Skip install rbenv"
-  break;
-  ;;
-* )
-  echo Please answer YES or NO.
-esac
-done;
+#break;
+#;;
+#[Nn]* )
+#  echo "Skip install rbenv"
+#  break;
+#  ;;
+#* )
+#  echo Please answer YES or NO.
+#esac
+#done;
 
 while true; do
 read -p 'Now install bundler serverkit? exec serverkit? [Y/n]' Answer
@@ -111,12 +111,12 @@ case $Answer in
 
 # Install bundler,serverkit and its dependencies
 sudo which bundle > /dev/null || sudo gem install bundler:1.17.2
-sudo gem install serverkit
-sudo gem install serverkit-atom
-sudo gem install serverkit-defaults
-sudo gem install serverkit-homebrew
-sudo gem install serverkit-karabiner
-sudo gem install serverkit-rbenv
+#sudo gem install serverkit
+#sudo gem install serverkit-atom
+#sudo gem install serverkit-defaults
+#sudo gem install serverkit-homebrew
+#sudo gem install serverkit-karabiner
+#sudo gem install serverkit-rbenv
 sudo bundle install > /dev/null
 
 # Run installer
