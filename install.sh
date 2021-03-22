@@ -43,7 +43,7 @@ curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dot
 osascript /tmp/changeDockPositionLeft.scpt
 rm /tmp/changeDockPositionLeft.scpt
 
-# change input source Control J
+# change input source Control J not add Japanese
 curl -LSfs -o /tmp/changeInputSourceControlJ.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeInputSourceControlJ.scpt
 osascript /tmp/changeInputSourceControlJ.scpt
 rm /tmp/changeInputSourceControlJ.scpt
@@ -73,6 +73,12 @@ unzip -oq ${tempfile} -d ${workspace}
 
 # Move to repository root path
 pushd ${workspace}/dotfiles-master > /dev/null
+
+# Key Repeat Fast, Delay Util Repeat Short
+automator -v automator/KeyRepeatFast.app
+
+# change input source Control J add Japanese
+automator -v automator/changeInputSourceControlJ.app
 
 # Install homebrew
 which brew > /dev/null
@@ -121,8 +127,6 @@ sudo bundle install > /dev/null
 
 # Run installer
 bundle exec serverkit apply recipe.yml.erb
-
-automator -v /Users/hiroyuki/github/dotfiles/automator/KeyRepeatFast.app
 
 break;
 ;;
