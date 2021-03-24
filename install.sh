@@ -80,6 +80,12 @@ automator -v automator/KeyRepeatFast.app
 # change input source Control J add Japanese
 automator -v automator/changeInputSourceControlJ.app
 
+# Finder Show Home
+automator -v automator/FinderShowHome.app
+
+# Safari Prevent cross-site tracking off
+automator -v automator/SafariPreventOff.app
+
 # Install homebrew
 which brew > /dev/null
 if [ "$?" -ne 0 ]; then
@@ -94,7 +100,7 @@ fi
 # Install rbenv
 #brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
 #echo 'eval "$(rbenv init -)"' >> ~/.zsh_profile
-#source ~/.bash_profile
+#source ~/.zsh_profile
 #rbenv install 3.0.0
 #rbenv rehash
 #rbenv global 3.0.0
