@@ -154,6 +154,12 @@ resources:
     repository: https://github.com/hiroyuki12/dotfiles.git
     state: updated
 
+# HelloWorldSwift
+  - type: git
+    path: /Users/<%= ENV["USER"] %>/github/HelloWorldSwift
+    repository: https://github.com/hiroyuki12/HelloWorldSwift.git
+    state: updated
+
 # HelloXamarinForms
 #  - type: git
 #    path: /Users/<%= ENV["USER"] %>/github/HelloXamarinForm
@@ -177,6 +183,10 @@ resources:
 # change caps lock to command
   - type: command
     script: osascript ~/github/dotfiles/appleScript/modifierKeyCapsLockToCommand.scpt
+
+# Keyboard Use F1,F2
+  - type: command
+    script: osascript ~/github/dotfiles/appleScript/KeyboardUseF1F2.scpt
 
 # Key Repeat Fast, Delay Util Repeat Short
 #  - type: command
