@@ -29,8 +29,8 @@ resources:
 #    name: mackup
 
   # brew cask
-  - type: homebrew_cask_package
-    name: dropbox
+#  - type: homebrew_cask_package
+#    name: dropbox
   - type: homebrew_cask_package
     name: mounty
 #  - type: homebrew_cask_package
@@ -55,15 +55,15 @@ resources:
 #    name: vagrant
 # - type: homebrew_cask_package
 #    name: virtualbox
-  - type: homebrew_cask_package
-    name: visual-studio-code
+#  - type: homebrew_cask_package
+#    name: visual-studio-code
 
   # defaults
     type: defaults
     domain: com.apple.finder
     key: ShowStatusBar
     value: 1
-  - id: ShowPath_finder # タイトルバーにパスを表示
+  - id: ShowPath_finder # Show Path Titlebar
     type: defaults
     domain: com.apple.finder
     key: _FXShowPosixPathInTitle
@@ -176,9 +176,9 @@ resources:
 #    script: osascript ~/github/dotfiles/appleScript/changeDisplayResolution.scpt
 
 # show Favorites bar (safari)
-#  - type: command
-#    check_script: defaults find ShowFavoritesBar | grep 1
-#    script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
+  - type: command
+    check_script: defaults find ShowFavoritesBar | grep 1
+    script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
 
 # change caps lock to command
   - type: command
@@ -237,8 +237,8 @@ resources:
     domain: com.apple.Terminal
     key: Startup Window Settings
     value: Basic2
-    notify:
-      - killall_Terminal
+ #   notify:
+ #     - killall_Terminal
 
 handlers:
   - id: killall_Finder
@@ -251,6 +251,6 @@ handlers:
     type: command
     script: killall Safari
   - id: killall_Terminal
-    type: command
-    script: killall Terminal
+ #   type: command
+ #   script: killall Terminal
 
