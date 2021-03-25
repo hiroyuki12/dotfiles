@@ -98,12 +98,14 @@ fi
 #  '' | [Yy]* )
 
 # Install rbenv
-#brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
-#echo 'eval "$(rbenv init -)"' >> ~/.zsh_profile
-#source ~/.zsh_profile
+brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
+echo 'eval "$(rbenv init -)"' >> ~/.zsh_profile
+source ~/.zsh_profile
 #rbenv install 3.0.0
-#rbenv rehash
+rbenv install 2.7.2 
+rbenv rehash
 #rbenv global 3.0.0
+rbenv global 2.7.2
 
 #break;
 #;;
