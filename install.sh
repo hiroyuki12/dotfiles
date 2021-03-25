@@ -13,6 +13,11 @@ curl -LSfs -o /tmp/tapToClickOn.scpt https://github.com/hiroyuki12/dotfiles/raw/
 osascript /tmp/tapToClickOn.scpt
 rm /tmp/tapToClickOn.scpt
 
+# showFavoritesBarSafari
+curl -LSfs -o /tmp/showFavoritesBar.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/showFavoritesBar.scpt
+osascript /tmp/showFavoritesBar.scpt
+rm /tmp/showFavoritesBar.scpt
+
 # changeDisplayResolution
 curl -LSfs -o /tmp/changeDisplayResolution.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDisplayResolution.scpt
 osascript /tmp/changeDisplayResolution.scpt
