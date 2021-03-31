@@ -192,6 +192,14 @@ resources:
   - type: command
     script: osascript ~/github/dotfiles/appleScript/KeyboardUseF1F2.scpt
 
+# Add Input Sources Japanese
+  - type: command
+    script: automator -v ~/github/dotfiles/automator/addInputSourceJapanese.app
+
+# change input source Control J
+  - type: command
+    script: osascript ~/github/dotfiles/appleScript/changeInputSourceControlJ.scpt
+
 # Key Repeat Fast, Delay Util Repeat Short
 #  - type: command
 #    script: osascript ~/github/dotfiles/appleScript/KeyRepeatFast.scpt

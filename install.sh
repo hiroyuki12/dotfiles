@@ -48,11 +48,6 @@ curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dot
 osascript /tmp/changeDockPositionLeft.scpt
 rm /tmp/changeDockPositionLeft.scpt
 
-# change input source Control J not add Japanese
-curl -LSfs -o /tmp/changeInputSourceControlJ.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeInputSourceControlJ.scpt
-osascript /tmp/changeInputSourceControlJ.scpt
-rm /tmp/changeInputSourceControlJ.scpt
-
 # install mas 1.4.2
 curl -LSfs -o /tmp/mas-cli.zip https://github.com/mas-cli/mas/releases/download/v1.4.2/mas-cli.zip
 unzip /tmp/mas-cli.zip
@@ -82,8 +77,13 @@ pushd ${workspace}/dotfiles-master > /dev/null
 # Key Repeat Fast, Delay Util Repeat Short
 automator -v automator/KeyRepeatFast.app
 
-# change input source Control J add Japanese
-automator -v automator/changeInputSourceControlJ.app
+# Add Input Sources Japanese
+automator -v automator/addInputSourceJapanese.app
+
+# change input source Control J (After Add Japanese)
+curl -LSfs -o /tmp/changeInputSourceControlJ.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeInputSourceControlJ.scpt
+osascript /tmp/changeInputSourceControlJ.scpt
+rm /tmp/changeInputSourceControlJ.scpt
 
 # Finder Show Home
 automator -v automator/FinderShowHome.app
