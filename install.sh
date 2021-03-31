@@ -78,12 +78,12 @@ pushd ${workspace}/dotfiles-master > /dev/null
 automator -v automator/KeyRepeatFast.app
 
 # Add Input Sources Japanese
-automator -v automator/addInputSourceJapanese.app
+#automator -v automator/addInputSourceJapanese.app
 
 # change input source Control J (After Add Input Sources Japanese)
-curl -LSfs -o /tmp/changeInputSourceControlJ.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeInputSourceControlJ.scpt
-osascript /tmp/changeInputSourceControlJ.scpt
-rm /tmp/changeInputSourceControlJ.scpt
+#curl -LSfs -o /tmp/changeInputSourceControlJ.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeInputSourceControlJ.scpt
+#osascript /tmp/changeInputSourceControlJ.scpt
+#rm /tmp/changeInputSourceControlJ.scpt
 
 # Finder Show Home
 automator -v automator/FinderShowHome.app
