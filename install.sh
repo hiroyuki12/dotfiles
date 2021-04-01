@@ -48,23 +48,6 @@ curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dot
 osascript /tmp/changeDockPositionLeft.scpt
 rm /tmp/changeDockPositionLeft.scpt
 
-# install mas 1.4.2
-curl -LSfs -o /tmp/mas-cli.zip https://github.com/mas-cli/mas/releases/download/v1.4.2/mas-cli.zip
-unzip /tmp/mas-cli.zip
-sudo mv mas /usr/local/bin/mas
-rm /tmp/mas-cli.zip
-
-break;
-;;
-[Nn]* )
-  echo "Skip Initial Setting"
-  break;
-  ;;
-* )
-  echo Please answer YES or NO.
-esac
-done;
-
 # Download zipped installer
 curl -LSfs -o ${tempfile} https://github.com/hiroyuki12/dotfiles/archive/master.zip
 
@@ -91,16 +74,29 @@ automator -v automator/FinderShowHome.app
 # Safari Prevent cross-site tracking off
 automator -v automator/SafariPreventOff.app
 
+break;
+;;
+[Nn]* )
+  echo "Skip Initial Setting"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
 # Install homebrew
 which brew > /dev/null
 if [ "$?" -ne 0 ]; then
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-#while true; do
-#read -p 'Now install rbenv? [Y/n]' Answer
-#case $Answer in
-#  '' | [Yy]* )
+brew install mas
+
+while true; do
+read -p 'Now install rbenv? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
 
 # Install rbenv
 brew install rbenv ruby-build rbenv-gemset rbenv-default-gems
@@ -112,16 +108,16 @@ rbenv rehash
 #rbenv global 3.0.0
 rbenv global 2.7.2
 
-#break;
-#;;
-#[Nn]* )
-#  echo "Skip install rbenv"
-#  break;
-#  ;;
-#* )
-#  echo Please answer YES or NO.
-#esac
-#done;
+break;
+;;
+[Nn]* )
+  echo "Skip install rbenv"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
 
 while true; do
 read -p 'Now install bundler serverkit? exec serverkit? [Y/n]' Answer
@@ -129,13 +125,8 @@ case $Answer in
   '' | [Yy]* )
 
 # Install bundler,serverkit and its dependencies
-sudo which bundle > /dev/null || sudo gem install bundler:1.17.2
-#sudo gem install serverkit
-#sudo gem install serverkit-atom
-#sudo gem install serverkit-defaults
-#sudo gem install serverkit-homebrew
-#sudo gem install serverkit-karabiner
-#sudo gem install serverkit-rbenv
+#sudo which bundle > /dev/null || sudo gem install bundler:1.17.2
+sudo which bundle > /dev/null || sudo gem install bundler
 sudo bundle install > /dev/null
 
 # Run installer
