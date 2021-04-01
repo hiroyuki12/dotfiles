@@ -26,16 +26,18 @@ alias cov='cd ~/github/covid19'
 
 alias d='cd ~/github/dotfiles'
 alias a='time serverkit apply recipe.yml.erb'
-alias a1='osascript ~/github/dotfiles/appleScript/changeInputSourceControlJ.scpt'
 
 alias cls='clear'
 
-alias masmas='brew install mas'
+alias masxcode='time mas install 497799835'
+alias masnas='time mas install 450664466'
+
+alias maslist='mas list'
+alias masversion='mas version'
+alias masinstall='brew install mas'
 alias maswunder='time mas install 410628904'
 alias maspocket='time mas install 568494494'
-alias masxcode='time mas install 497799835'
 alias mascoteditor='time mas install 1024640650'
-alias masnas='time mas install 450664466'
 alias mastodo='time mas install 1274495053'
 
 alias bcode='time b Caskroom/cask/visual-studio-code'
