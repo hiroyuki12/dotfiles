@@ -3,12 +3,14 @@ resources:
     script: brew update
 
   # brew
-  - type: package
-    name: peco
-  - type: package
-    name: wget
+#  - type: package
+#    name: peco
+#  - type: package
+#    name: wget
   - type: package
     name: jq
+#  - type: package
+#    name: deno 
 #  - type: package
 #    name: ansible
 #  - type: package
@@ -180,21 +182,21 @@ resources:
 #    script: osascript ~/github/dotfiles/appleScript/changeDisplayResolution.scpt
 
 # show Favorites bar (safari)
-  - type: command
-    check_script: defaults find ShowFavoritesBar | grep 1
-    script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/showFavoritesBar.scpt
 
 # change caps lock to command
-  - type: command
-    script: osascript ~/github/dotfiles/appleScript/modifierKeyCapsLockToCommand.scpt
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/modifierKeyCapsLockToCommand.scpt
 
 # Keyboard Use F1,F2
   - type: command
+    check_script: defaults find fnState | grep 1
     script: osascript ~/github/dotfiles/appleScript/KeyboardUseF1F2.scpt
 
 # Finder Preference Sidebar Show Home
-  - type: command
-    script: osascript ~/github/dotfiles/appleScript/FinderPreferenceSidebar.scpt
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/FinderPreferenceSidebar.scpt
 
 # Add Input Sources Japanese
   - type: command
