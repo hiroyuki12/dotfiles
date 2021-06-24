@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  nginx:
+    image: image-name:nginx-1.17.3-alpine
+    build: 
+      context: ./docker/nginx
+      dockerfile: Dockerfile
+    container_name: nginx
+    ports:
+      - 80:80
+    volumes:
+      - ./web/env/nginx:/etc/nginx/conf.d
+    logging:
+      driver: "none"
+    restart: always
