@@ -12,6 +12,7 @@ alias gs='git status'
 alias ga='git add'
 alias gl='git log'
 alias glp='git log -p'
+alias gls='git log --stat'
 #alias gr='git checkout HEAD'
 alias gche='git checkout'
 
@@ -49,4 +50,6 @@ export PATH=~/development/flutter/bin:$PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 eval "$(rbenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH="$HOME/.nodenv/shims:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 export SOURCEKIT_TOOLCHAIN_PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
