@@ -1,5 +1,51 @@
 " nnoremap sf :new<Cr>:FuzzyFinderFile<Cr>
 
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible               " Be iMproved
+endif
+
+" Required:
+set runtimepath+=/Users/hiroyuki/.cache/dein/repos/github.com/Shougo/dein.vim
+
+" Required:
+call dein#begin('/Users/hiroyuki/.cache/dein')
+
+" Let dein manage dein
+" Required:
+call dein#add('/Users/hiroyuki/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+" Add or remove your plugins here like this:
+"call dein#add('Shougo/neosnippet.vim')
+"call dein#add('Shougo/neosnippet-snippets')
+call dein#add('Shougo/defx.nvim')
+
+  " ~~~ ここからtomlファイルを利用するための設定 ~~~
+  " 導入するプラグインを記載したtomlファイルのパスを記載する
+   let s:toml_dir  = $HOME . '/.config/nvim/dein' 
+   let s:toml      = s:toml_dir . '/dein.toml'
+   let s:lazy_toml = s:toml_dir . '/lazy.toml'
+  
+   " tomlファイルをキャッシュしておくための記述
+   call dein#load_toml(s:toml,      {'lazy': 0})
+   call dein#load_toml(s:lazy_toml, {'lazy': 1})
+  " ~~~ tomlのための設定はここまで ~~~
+
+
+" Required:
+call dein#end()
+
+" Required:
+filetype plugin indent on
+syntax enable
+
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
+
+"End dein Scripts-------------------------
+
 set incsearch   " 検索文字を打ち込むと即検索する（インクリメンタルサーチ）
 set ignorecase  " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set laststatus=2  " need statusline
@@ -27,6 +73,18 @@ nnoremap # #zzzv
 nnoremap g* g*zzzv
 nnoremap g# g#zzzv
 
+" vimfiler
+nmap sf :VimFilerBufferDir<Return>
+nmap sF :VimFilerExplorer -find<Return>
+nmap sb :Unite buffer<Return>
+let g:vimfiler_as_default_explorer = 1
+let g:vimfiler_safe_mode_by_default = 0
+let g:vimfiler_enable_auto_cd = 0
+let g:vimfiler_tree_leaf_icon = ''
+let g:vimfiler_tree_opened_icon = '▾'
+let g:vimfiler_tree_closed_icon = '▸'
+let g:vimfiler_marked_file_icon = '✓'
+
 " ssで分割 scで閉じる so
 noremap ss <C-W>s
 noremap sc <C-W>c
@@ -48,6 +106,25 @@ noremap tt <C-W><C-W>
 
 " b でブレース 対応する括弧(){}にジャンプ
 nmap b %
+
+" Splt window
+nmap ss :split<Return><C-w>w
+nmap sv :vsplit<Return><C-w>w
+ " Move window
+nmap <Space> <C-w>w
+map s<left> <C-w>h
+map s<up> <C-w>k
+map s<down> <C-w>j
+map s<right> <C-w>l
+map sh <C-w>h
+map sk <C-w>k
+map sj <C-w>j
+map sl <C-w>l
+" Resize window
+nmap <C-w><left> <C-w><
+nmap <C-w><right> <C-w>>
+nmap <C-w><up> <C-w>+
+nmap <C-w><down> <C-w>-
 
 " 全角スペースを視覚化
 "highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white

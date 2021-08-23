@@ -4,6 +4,8 @@ PS1="%{$fg[green]%}%~%(!.#. %{$reset_color%}$) "
 #SPROMPT="%{$fg[red]%}correct: %R -> %r [nyae]? %{$reset_color%}"
 #RPROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}"
 
+alias vo='nvim'
+
 alias gd='git diff'
 alias gc='git commit'
 alias gp='git push'
@@ -46,7 +48,7 @@ alias q='exit'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
-export PATH=~/development/flutter/bin:$PATH
+export PATH=~/github/flutter/bin:$PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 eval "$(rbenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
