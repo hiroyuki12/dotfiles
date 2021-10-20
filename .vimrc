@@ -51,6 +51,8 @@ set statusline=%t\ %y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%r%m%=%c:%l/%L[%3p
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2
+" tab to space
+set expandtab
 syntax on " color    /etc/vimrc(fedora)
 
 imap <C-l> <esc>
@@ -220,7 +222,6 @@ endif
 "set number      " 行番号を表示 :se nu  非表示 :se nonu  :h number
 "set wildmenu    " :e .v<TAB><TAB> した時に補完候補を上に表示
 "set list      " 改行に$を表示 :se list :se nolist
-"set expandtab
 "set softtabstop=2
 "set autoindent
 "set cindent
