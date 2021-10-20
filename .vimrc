@@ -18,19 +18,17 @@ call dein#add('/Users/hiroyuki/.cache/dein/repos/github.com/Shougo/dein.vim')
 " Add or remove your plugins here like this:
 "call dein#add('Shougo/neosnippet.vim')
 "call dein#add('Shougo/neosnippet-snippets')
-call dein#add('Shougo/defx.nvim')
 
   " ~~~ ここからtomlファイルを利用するための設定 ~~~
   " 導入するプラグインを記載したtomlファイルのパスを記載する
-   let s:toml_dir  = $HOME . '/.config/nvim/dein' 
+   let s:toml_dir  = $HOME . '/.config/nvim/dein'
    let s:toml      = s:toml_dir . '/dein.toml'
-   let s:lazy_toml = s:toml_dir . '/lazy.toml'
-  
+  " let s:lazy_toml = s:toml_dir . '/lazy.toml'
+
    " tomlファイルをキャッシュしておくための記述
    call dein#load_toml(s:toml,      {'lazy': 0})
-   call dein#load_toml(s:lazy_toml, {'lazy': 1})
+   "call dein#load_toml(s:lazy_toml, {'lazy': 1})
   " ~~~ tomlのための設定はここまで ~~~
-
 
 " Required:
 call dein#end()
@@ -50,6 +48,9 @@ set incsearch   " 検索文字を打ち込むと即検索する（インクリ�
 set ignorecase  " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set laststatus=2  " need statusline
 set statusline=%t\ %y%{'['.(&fenc!=''?&fenc:&enc).':'.&ff.']'}%r%m%=%c:%l/%L[%3p%%]
+" 1 tab == 2 spaces
+set shiftwidth=2
+set tabstop=2
 syntax on " color    /etc/vimrc(fedora)
 
 imap <C-l> <esc>
@@ -220,9 +221,7 @@ endif
 "set wildmenu    " :e .v<TAB><TAB> した時に補完候補を上に表示
 "set list      " 改行に$を表示 :se list :se nolist
 "set expandtab
-"set tabstop=2
 "set softtabstop=2
-"set shiftwidth=2
 "set autoindent
 "set cindent
 "set smarttab
