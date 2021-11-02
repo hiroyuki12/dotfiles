@@ -4,6 +4,7 @@ PS1="%{$fg[green]%}%~%(!.#. %{$reset_color%}$) "
 #SPROMPT="%{$fg[red]%}correct: %R -> %r [nyae]? %{$reset_color%}"
 #RPROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}"
 
+alias tap='automator -v ~/github/dotfiles/automator/TapToClickOn.app/'
 alias vo='nvim'
 
 alias gd='git diff'
