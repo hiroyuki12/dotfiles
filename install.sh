@@ -9,9 +9,9 @@ case $Answer in
   '' | [Yy]* )
 
 # tapToClickOn
-curl -LSfs -o /tmp/tapToClickOn.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/tapToClickOn.scpt
+#curl -LSfs -o /tmp/tapToClickOn.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/tapToClickOn.scpt
 #osascript /tmp/tapToClickOn.scpt
-rm /tmp/tapToClickOn.scpt
+#rm /tmp/tapToClickOn.scpt
 
 # showFavoritesBarSafari
 #curl -LSfs -o /tmp/showFavoritesBar.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/showFavoritesBar.scpt
@@ -19,14 +19,14 @@ rm /tmp/tapToClickOn.scpt
 #rm /tmp/showFavoritesBar.scpt
 
 # changeDisplayResolution
-curl -LSfs -o /tmp/changeDisplayResolution.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDisplayResolution.scpt
+#curl -LSfs -o /tmp/changeDisplayResolution.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDisplayResolution.scpt
 #osascript /tmp/changeDisplayResolution.scpt
-rm /tmp/changeDisplayResolution.scpt
+#rm /tmp/changeDisplayResolution.scpt
 
 # change caps lock to command 
-curl -LSfs -o /tmp/modifierKeyCapsLockToCommand.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/modifierKeyCapsLockToCommand.scpt
+#curl -LSfs -o /tmp/modifierKeyCapsLockToCommand.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/modifierKeyCapsLockToCommand.scpt
 #osascript /tmp/modifierKeyCapsLockToCommand.scpt
-rm /tmp/modifierKeyCapsLockToCommand.scpt
+#rm /tmp/modifierKeyCapsLockToCommand.scpt
 
 # Key Repeat Fast, Delay Util Repeat Short
 #curl -LSfs -o /tmp/KeyRepeatFast.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/KeyRepeatFast.scpt
@@ -39,14 +39,14 @@ rm /tmp/modifierKeyCapsLockToCommand.scpt
 #rm /tmp/threeFingerDrag.scpt
 
 # correct spelling off
-curl -LSfs -o /tmp/CorrectSpellingOff.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/CorrectSpellingOff.scpt
+#curl -LSfs -o /tmp/CorrectSpellingOff.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/CorrectSpellingOff.scpt
 #osascript /tmp/CorrectSpellingOff.scpt
-rm /tmp/CorrectSpellingOff.scpt
+#rm /tmp/CorrectSpellingOff.scpt
 
 # change dock position left
-curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDockPositionLeft.scpt
+#curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDockPositionLeft.scpt
 #osascript /tmp/changeDockPositionLeft.scpt
-rm /tmp/changeDockPositionLeft.scpt
+#rm /tmp/changeDockPositionLeft.scpt
 
 # Download zipped installer
 curl -LSfs -o ${tempfile} https://github.com/hiroyuki12/dotfiles/archive/master.zip
@@ -57,8 +57,11 @@ unzip -oq ${tempfile} -d ${workspace}
 # Move to repository root path
 pushd ${workspace}/dotfiles-master > /dev/null
 
+# tapToClickOn
+automator -v automator/TapToClickOn.app
+
 # Key Repeat Fast, Delay Util Repeat Short
-automator -v automator/KeyRepeatFast.app
+#automator -v automator/KeyRepeatFast.app
 
 # Add Input Sources Japanese
 #automator -v automator/addInputSourceJapanese.app
@@ -69,10 +72,10 @@ automator -v automator/KeyRepeatFast.app
 #rm /tmp/changeInputSourceControlJ.scpt
 
 # Finder Show Home
-automator -v automator/FinderShowHome.app
+#automator -v automator/FinderShowHome.app
 
 # Safari Prevent cross-site tracking off
-automator -v automator/SafariPreventOff.app
+#automator -v automator/SafariPreventOff.app
 
 break;
 ;;
@@ -143,7 +146,7 @@ break;
 esac
 done;
 
-open Basic2.terminal  # add Terminal Profile
+#open Basic2.terminal  # add Terminal Profile
 
 # Move to original path
 popd > /dev/null
