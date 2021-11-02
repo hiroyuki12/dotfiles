@@ -8,7 +8,7 @@ read -p 'Now Initial Setting? [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
-# tapToClickOn
+# ng tapToClickOn
 #curl -LSfs -o /tmp/tapToClickOn.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/tapToClickOn.scpt
 #osascript /tmp/tapToClickOn.scpt
 #rm /tmp/tapToClickOn.scpt
@@ -38,7 +38,12 @@ curl -LSfs -o /tmp/CorrectSpellingOff.scpt https://github.com/hiroyuki12/dotfile
 osascript /tmp/CorrectSpellingOff.scpt
 rm /tmp/CorrectSpellingOff.scpt
 
-# change dock position left
+# change input source Control J (After Add Input Sources Japanese)
+curl -LSfs -o /tmp/changeInputSourceControlJ.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeInputSourceControlJ.scpt
+osascript /tmp/changeInputSourceControlJ.scpt
+rm /tmp/changeInputSourceControlJ.scpt
+
+# ng change dock position left
 #curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDockPositionLeft.scpt
 #osascript /tmp/changeDockPositionLeft.scpt
 #rm /tmp/changeDockPositionLeft.scpt
@@ -53,24 +58,16 @@ unzip -oq ${tempfile} -d ${workspace}
 pushd ${workspace}/dotfiles-master > /dev/null
 
 ##
-# tapToClickOn
-#automator -v automator/TapToClickOn.app
-
-# Key Repeat Fast, Delay Util Repeat Short
-#automator -v automator/KeyRepeatFast.app
+# ok tapToClickOn
+automator -v automator/TapToClickOn.app
 
 # Add Input Sources Japanese
 #automator -v automator/addInputSourceJapanese.app
 
-# change input source Control J (After Add Input Sources Japanese)
-#curl -LSfs -o /tmp/changeInputSourceControlJ.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeInputSourceControlJ.scpt
-#osascript /tmp/changeInputSourceControlJ.scpt
-#rm /tmp/changeInputSourceControlJ.scpt
-
 # Finder Show Home
-#automator -v automator/FinderShowHome.app
+automator -v automator/FinderShowHome.app
 
-# Safari Prevent cross-site tracking off
+# ng Safari Prevent cross-site tracking off
 #automator -v automator/SafariPreventOff.app
 
 break;
