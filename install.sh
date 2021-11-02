@@ -10,7 +10,7 @@ case $Answer in
 
 # tapToClickOn
 curl -LSfs -o /tmp/tapToClickOn.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/tapToClickOn.scpt
-osascript /tmp/tapToClickOn.scpt
+#osascript /tmp/tapToClickOn.scpt
 rm /tmp/tapToClickOn.scpt
 
 # showFavoritesBarSafari
@@ -20,12 +20,12 @@ rm /tmp/tapToClickOn.scpt
 
 # changeDisplayResolution
 curl -LSfs -o /tmp/changeDisplayResolution.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDisplayResolution.scpt
-osascript /tmp/changeDisplayResolution.scpt
+#osascript /tmp/changeDisplayResolution.scpt
 rm /tmp/changeDisplayResolution.scpt
 
 # change caps lock to command 
 curl -LSfs -o /tmp/modifierKeyCapsLockToCommand.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/modifierKeyCapsLockToCommand.scpt
-osascript /tmp/modifierKeyCapsLockToCommand.scpt
+#osascript /tmp/modifierKeyCapsLockToCommand.scpt
 rm /tmp/modifierKeyCapsLockToCommand.scpt
 
 # Key Repeat Fast, Delay Util Repeat Short
@@ -40,12 +40,12 @@ rm /tmp/modifierKeyCapsLockToCommand.scpt
 
 # correct spelling off
 curl -LSfs -o /tmp/CorrectSpellingOff.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/CorrectSpellingOff.scpt
-osascript /tmp/CorrectSpellingOff.scpt
+#osascript /tmp/CorrectSpellingOff.scpt
 rm /tmp/CorrectSpellingOff.scpt
 
 # change dock position left
 curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDockPositionLeft.scpt
-osascript /tmp/changeDockPositionLeft.scpt
+#osascript /tmp/changeDockPositionLeft.scpt
 rm /tmp/changeDockPositionLeft.scpt
 
 # Download zipped installer
