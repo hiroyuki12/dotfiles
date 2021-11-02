@@ -13,35 +13,30 @@ case $Answer in
 #osascript /tmp/tapToClickOn.scpt
 #rm /tmp/tapToClickOn.scpt
 
-# showFavoritesBarSafari
-#curl -LSfs -o /tmp/showFavoritesBar.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/showFavoritesBar.scpt
-#osascript /tmp/showFavoritesBar.scpt
-#rm /tmp/showFavoritesBar.scpt
-
 # changeDisplayResolution
-#curl -LSfs -o /tmp/changeDisplayResolution.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDisplayResolution.scpt
-#osascript /tmp/changeDisplayResolution.scpt
-#rm /tmp/changeDisplayResolution.scpt
+curl -LSfs -o /tmp/changeDisplayResolution.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDisplayResolution.scpt
+osascript /tmp/changeDisplayResolution.scpt
+rm /tmp/changeDisplayResolution.scpt
 
 # change caps lock to command 
-#curl -LSfs -o /tmp/modifierKeyCapsLockToCommand.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/modifierKeyCapsLockToCommand.scpt
-#osascript /tmp/modifierKeyCapsLockToCommand.scpt
-#rm /tmp/modifierKeyCapsLockToCommand.scpt
+curl -LSfs -o /tmp/modifierKeyCapsLockToCommand.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/modifierKeyCapsLockToCommand.scpt
+osascript /tmp/modifierKeyCapsLockToCommand.scpt
+rm /tmp/modifierKeyCapsLockToCommand.scpt
 
 # Key Repeat Fast, Delay Util Repeat Short
-#curl -LSfs -o /tmp/KeyRepeatFast.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/KeyRepeatFast.scpt
-#osascript /tmp/KeyRepeatFast.scpt
-#rm /tmp/KeyRepeatFast.scpt
+curl -LSfs -o /tmp/KeyRepeatFast.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/KeyRepeatFast.scpt
+osascript /tmp/KeyRepeatFast.scpt
+rm /tmp/KeyRepeatFast.scpt
 
 # three finger drag
-#curl -LSfs -o /tmp/threeFingerDrag.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/threeFingerDrag.scpt
-#osascript /tmp/threeFingerDrag.scpt
-#rm /tmp/threeFingerDrag.scpt
+curl -LSfs -o /tmp/threeFingerDrag.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/threeFingerDrag.scpt
+osascript /tmp/threeFingerDrag.scpt
+rm /tmp/threeFingerDrag.scpt
 
 # correct spelling off
-#curl -LSfs -o /tmp/CorrectSpellingOff.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/CorrectSpellingOff.scpt
-#osascript /tmp/CorrectSpellingOff.scpt
-#rm /tmp/CorrectSpellingOff.scpt
+curl -LSfs -o /tmp/CorrectSpellingOff.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/CorrectSpellingOff.scpt
+osascript /tmp/CorrectSpellingOff.scpt
+rm /tmp/CorrectSpellingOff.scpt
 
 # change dock position left
 #curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDockPositionLeft.scpt
@@ -57,8 +52,9 @@ unzip -oq ${tempfile} -d ${workspace}
 # Move to repository root path
 pushd ${workspace}/dotfiles-master > /dev/null
 
+##
 # tapToClickOn
-automator -v automator/TapToClickOn.app
+#automator -v automator/TapToClickOn.app
 
 # Key Repeat Fast, Delay Util Repeat Short
 #automator -v automator/KeyRepeatFast.app
