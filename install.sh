@@ -8,6 +8,9 @@ read -p 'Now Initial Setting? [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
+defaults write com.apple.dock orientation -string "left"
+killall Dock
+
 # ng tapToClickOn
 #curl -LSfs -o /tmp/tapToClickOn.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/tapToClickOn.scpt
 #osascript /tmp/tapToClickOn.scpt

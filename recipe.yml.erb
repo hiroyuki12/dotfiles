@@ -71,29 +71,25 @@ resources:
     value: 1
     notify:
       - killall_Finder
-  #- id: ShowPath_finder # Show Path Titlebar
-  #  type: defaults
-  #  domain: com.apple.finder
-  #  key: _FXShowPosixPathInTitle
-  #  value: 0
-  #- type: defaults
-  #  domain: com.apple.dock
-  #  key: magnification
-  #  value: 1
-  #  notify:
-  #    - killall_Dock
-  #- type: defaults
-  #  domain: com.apple.dock
-  #  key: tilesize 
-  #  value: 50
-  #  notify:
-  #    - killall_Dock
-#  - type: defaults
-#    key: InitialKeyRepeat
-#    value: 15
-#  - type: defaults
-#    key: KeyRepeat
-#    value: 2
+  - id: Show Path Bar
+    type: defaults
+    domain: com.apple.finder
+    key: ShowPathbar
+    value: 1
+    notify:
+      - killall_Finder
+  - type: defaults
+    domain: com.apple.dock
+    key: magnification
+    value: 1
+    notify:
+      - killall_Dock
+  - type: defaults
+    domain: com.apple.dock
+    key: tilesize 
+    value: 50
+    notify:
+      - killall_Dock
 #    notify:
 #      - killall_Safari
 
@@ -173,6 +169,7 @@ resources:
     path: /Users/<%= ENV["USER"] %>/github/react-pages
     repository: https://github.com/hiroyuki12/react-pages.git
     state: updated
+
 # HelloXamarinForms
 #  - type: git
 #    path: /Users/<%= ENV["USER"] %>/github/HelloXamarinForm
