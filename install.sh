@@ -3,6 +3,8 @@
 tempfile=/tmp/dotfiles.zip
 workspace=/tmp/dotfiles
 
+# start Initial Setting
+
 while true; do
 read -p 'Now Initial Setting? [Y/n]' Answer
 case $Answer in
@@ -77,7 +79,7 @@ break;
 esac
 done;
 
-# Exec Automator
+# start Exec Automator
 
 while true; do
 read -p 'Now exec automator? [Y/n]' Answer
@@ -119,6 +121,7 @@ fi
 
 brew install mas
 
+# start Install rbenv
 while true; do
 read -p 'Now install rbenv? [Y/n]' Answer
 case $Answer in
@@ -145,6 +148,8 @@ break;
 esac
 done;
 
+# Run installer
+
 while true; do
 read -p 'Now install bundler serverkit? exec serverkit? [Y/n]' Answer
 case $Answer in
@@ -168,6 +173,35 @@ break;
   echo Please answer YES or NO.
 esac
 done;
+
+# start Install nodenv
+
+while true; do
+read -p 'Now install nodenv? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+which nodenv > /dev/null
+#if [ "$?" -ne 0 ]; then
+  anyenv install --init
+  anyenv install nodenv
+  exec $SHELL -l
+  nodenv -v
+  mkdir -p "$(nodenv root)"/plugins
+  git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
+#fi
+
+break;
+;;
+[Nn]* )
+  echo "Skip install nodenv"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
 
 #open Basic2.terminal  # add Terminal Profile
 
