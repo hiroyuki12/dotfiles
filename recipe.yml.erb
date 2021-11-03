@@ -69,23 +69,25 @@ resources:
     domain: com.apple.finder
     key: ShowStatusBar
     value: 1
-  - id: ShowPath_finder # Show Path Titlebar
-    type: defaults
-    domain: com.apple.finder
-    key: _FXShowPosixPathInTitle
-    value: 0
-  - type: defaults
-    domain: com.apple.dock
-    key: magnification
-    value: 1
     notify:
-      - killall_Dock
-  - type: defaults
-    domain: com.apple.dock
-    key: largesize
-    value: 100
-    notify:
-      - killall_Dock
+      - killall_Finder
+  #- id: ShowPath_finder # Show Path Titlebar
+  #  type: defaults
+  #  domain: com.apple.finder
+  #  key: _FXShowPosixPathInTitle
+  #  value: 0
+  #- type: defaults
+  #  domain: com.apple.dock
+  #  key: magnification
+  #  value: 1
+  #  notify:
+  #    - killall_Dock
+  #- type: defaults
+  #  domain: com.apple.dock
+  #  key: tilesize 
+  #  value: 50
+  #  notify:
+  #    - killall_Dock
 #  - type: defaults
 #    key: InitialKeyRepeat
 #    value: 15
@@ -99,8 +101,8 @@ resources:
   - type: command
     check_script: defaults find orientation | grep left
     script: defaults write "com.apple.dock" "orientation" -string "left"
-    notiry:
-      - killall_Dock
+  - type: command
+    script: killall Dock
 # New windows points to home (finder)
   #- type: command
   #  check_script: defaults find NewWindowTarget | grep PfHm
@@ -166,6 +168,11 @@ resources:
     repository: https://github.com/hiroyuki12/HelloWorldSwift.git
     state: updated
 
+# react pages
+  - type: git
+    path: /Users/<%= ENV["USER"] %>/github/react-pages
+    repository: https://github.com/hiroyuki12/react-pages.git
+    state: updated
 # HelloXamarinForms
 #  - type: git
 #    path: /Users/<%= ENV["USER"] %>/github/HelloXamarinForm
@@ -203,8 +210,8 @@ resources:
     script: automator -v ~/github/dotfiles/automator/addInputSourceJapanese.app
 
 # change input source Control J (After Add Input Sources Japanese)
-  - type: command
-    script: osascript ~/github/dotfiles/appleScript/changeInputSourceControlJ.scpt
+#  - type: command
+#    script: osascript ~/github/dotfiles/appleScript/changeInputSourceControlJ.scpt
 
 # Key Repeat Fast, Delay Util Repeat Short
 #  - type: command
