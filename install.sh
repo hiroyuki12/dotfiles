@@ -111,7 +111,10 @@ done;
 # Install homebrew
 which brew > /dev/null
 if [ "$?" -ne 0 ]; then
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    #ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/hiroyuki/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 brew install mas
