@@ -43,6 +43,11 @@ curl -LSfs -o /tmp/changeInputSourceControlJ.scpt https://github.com/hiroyuki12/
 osascript /tmp/changeInputSourceControlJ.scpt
 rm /tmp/changeInputSourceControlJ.scpt
 
+# show Safari Favorites Bar
+curl -LSfs -o /tmp/showFavoritesBar.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/showFavoritesBar.scpt
+osascript /tmp/showFavoritesBar.scpt
+rm /tmp/showFavoritesBar.scpt
+
 # ng change dock position left
 #curl -LSfs -o /tmp/changeDockPositionLeft.scpt https://github.com/hiroyuki12/dotfiles/raw/master/appleScript/changeDockPositionLeft.scpt
 #osascript /tmp/changeDockPositionLeft.scpt
@@ -56,6 +61,25 @@ unzip -oq ${tempfile} -d ${workspace}
 
 # Move to repository root path
 pushd ${workspace}/dotfiles-master > /dev/null
+
+
+break;
+;;
+[Nn]* )
+  echo "Skip Initial Setting"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
+# Exec Automator
+
+while true; do
+read -p 'Now exec automator? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
 
 ##
 # ok tapToClickOn
@@ -73,7 +97,7 @@ automator -v automator/FinderShowHome.app
 break;
 ;;
 [Nn]* )
-  echo "Skip Initial Setting"
+  echo "Skip Exec automator"
   break;
   ;;
 * )
