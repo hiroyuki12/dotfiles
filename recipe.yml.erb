@@ -93,12 +93,6 @@ resources:
 #    notify:
 #      - killall_Safari
 
-  # command
-  - type: command
-    check_script: defaults find orientation | grep left
-    script: defaults write "com.apple.dock" "orientation" -string "left"
-  - type: command
-    script: killall Dock
 # New windows points to home (finder)
   #- type: command
   #  check_script: defaults find NewWindowTarget | grep PfHm
