@@ -25,7 +25,7 @@ alias ls='ls -G'
 
 alias sea='brew search'
 alias b='brew install'
-alias c='brew cask install'
+alias c='brew install --cask'
 alias cov='cd ~/github/covid19'
 
 alias d='cd ~/github/dotfiles'
@@ -49,7 +49,7 @@ alias q='exit'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
-export PATH=~/github/flutter/bin:$PATH
+export PATH=~/sandbox/flutter/bin:$PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 eval "$(rbenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
