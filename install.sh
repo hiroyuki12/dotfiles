@@ -177,24 +177,29 @@ done;
 # start Install nodenv
 
 while true; do
-read -p 'Now install nodenv? [Y/n]' Answer
+read -p 'Now install nodenv & node 16.13.2? [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
 which nodenv > /dev/null
-#if [ "$?" -ne 0 ]; then
+if [ "$?" -ne 0 ]; then
   anyenv install --init
   anyenv install nodenv
   exec $SHELL -l
   nodenv -v
   mkdir -p "$(nodenv root)"/plugins
   git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
-#fi
+fi
+
+nodenv install 16.13.2
+nodenv rehash
+nodenv global 16.13.2
+node -v
 
 break;
 ;;
 [Nn]* )
-  echo "Skip install nodenv"
+  echo "Skip install nodenv & node 16.13.2"
   break;
   ;;
 * )
@@ -202,6 +207,32 @@ break;
 esac
 done;
 
+# start Install dein
+
+while true; do
+read -p 'Now install dein? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+#which nodenv > /dev/null
+#if [ "$?" -ne 0 ]; then
+  mkdir -p ~/.cache/dein
+  cd ~/.cache/dein
+  curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
+  sh ./installer.sh ~/.cache/dein
+  mkdir -p ~/.config/nvim/dein/
+#fi
+
+break;
+;;
+[Nn]* )
+  echo "Skip install dein"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
 
 #open Basic2.terminal  # add Terminal Profile
 

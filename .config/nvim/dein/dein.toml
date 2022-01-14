@@ -1,16 +1,6 @@
-# dein.vim command
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 build = './install.sh nightly'
-
-[[plugins]]
-repo = 'Shougo/vimfiler.vim'
-
-[[plugins]]
-repo = 'Shougo/unite.vim'
-
-[[plugins]]
-repo = 'Shougo/denite.nvim'
