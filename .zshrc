@@ -49,7 +49,7 @@ alias q='exit'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
-export PATH=~/sandbox/flutter/bin:$PATH
+export PATH=~/bin/flutter/bin:$PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 eval "$(rbenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -58,3 +58,15 @@ export PATH="$HOME/go/bin:$PATH"
 export SOURCEKIT_TOOLCHAIN_PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
 eval "$(anyenv init -)"
 export PATH="$HOME/.anyenv/envs/nodenv/bin:$PATH"
+
+# pnpm
+export PNPM_HOME="/Users/hiroyuki/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
+
+# bun completions
+[ -s "/Users/hiroyuki/.bun/_bun" ] && source "/Users/hiroyuki/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/hiroyuki/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
