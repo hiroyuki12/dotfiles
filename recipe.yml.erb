@@ -258,10 +258,15 @@ resources:
 #  - type: symlink
 #    source: /Users/<%= ENV["USER"] %>/.netrc
 #    destination: /Volumes/share/Mac/.netrc
+#  - type: symlink
+#    source: /Users/<%= ENV["USER"] %>/Desktop/share
+#    destination: /Volumes/share
   - type: symlink
-    source: /Users/<%= ENV["USER"] %>/Desktop/share
-    destination: /Volumes/share
-
+    source: /Users/<%= ENV["USER"] %>/.config/nvim/dein/dein.toml
+    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/nvim/dein/dein.toml
+  - type: symlink
+    source: /Users/<%= ENV["USER"] %>/.config/nvim/dein/lazy.toml
+    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/nvim/dein/lazy.toml
 
   # rbenv_ruby
   #  - type: rbenv_ruby
