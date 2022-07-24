@@ -151,10 +151,10 @@ resources:
 #    state: updated
 
 # dotfiles
-  - type: git
-    path: /Users/<%= ENV["USER"] %>/github/dotfiles
-    repository: https://github.com/hiroyuki12/dotfiles.git
-    state: updated
+#  - type: git
+#    path: /Users/<%= ENV["USER"] %>/github/dotfiles
+#    repository: https://github.com/hiroyuki12/dotfiles.git
+#    state: updated
 
 # HelloWorldSwift
   - type: git
@@ -166,6 +166,18 @@ resources:
   - type: git
     path: /Users/<%= ENV["USER"] %>/github/react-pages
     repository: https://github.com/hiroyuki12/react-pages.git
+    state: updated
+
+# vite react pages
+  - type: git
+    path: /Users/<%= ENV["USER"] %>/github/vite-react-pages
+    repository: https://github.com/hiroyuki12/vite-react-pages.git
+    state: updated
+
+# vercel vite vue
+  - type: git
+    path: /Users/<%= ENV["USER"] %>/github/vercel-vite-vue
+    repository: https://github.com/hiroyuki12/vercel-vite-vue.git
     state: updated
 
 # HelloXamarinForms
