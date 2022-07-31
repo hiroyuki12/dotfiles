@@ -1,0 +1,29 @@
+{
+  "title": "control+l maps to esc",
+  "rules": [
+    {
+      "description": "Make Option+tab activate Cmd+tab",
+      "manipulators": [
+     {
+        "type": "basic",
+        "from": {
+            "key_code": "l",
+            "modifiers": {
+                "mandatory": [
+                    "control"
+                ],
+                "optional": [
+                    "any"
+                ]
+            }
+        },
+        "to": [
+               {
+                "key_code": "escape"
+               }
+        ]
+      }
+      ]
+    }
+  ]
+}
