@@ -1,10 +1,16 @@
 {
-  "title": "control+l maps to esc",
+  "title": "xcode control+l maps to esc",
   "rules": [
     {
-      "description": "Make Option+tab activate Cmd+tab",
+      "description": "Xcode only, control+l maps to esc",
       "manipulators": [
      {
+       "conditions": [
+          {
+          "bundle_identifiers": ["^com\\.apple\\.dt.Xcode$"],
+          "type": "frontmost_application_if"
+          }
+        ],
         "type": "basic",
         "from": {
             "key_code": "l",
