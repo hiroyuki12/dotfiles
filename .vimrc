@@ -58,6 +58,8 @@ syntax on " color    /etc/vimrc(fedora)
 imap <C-l> <esc>
 map <C-l> <esc>
 cmap <C-l> <C-C>
+noremap <Space>y "*y
+noremap <Space>p "*p
 nnoremap ,vr :source %<CR>
 map <C-k> D
 map <Space> <C-d>
