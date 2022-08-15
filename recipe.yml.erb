@@ -288,6 +288,12 @@ resources:
     source: /Users/<%= ENV["USER"] %>/.config/nvim/dein/lazy.toml
     destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/nvim/dein/lazy.toml
   - type: symlink
+    source: /Users/<%= ENV["USER"] %>/.config/nvim/init.vim
+    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/nvim/init.vim
+  - type: symlink
+    source: /Users/<%= ENV["USER"] %>/.config/nvim/maps.vim
+    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/nvim/maps.vim
+  - type: symlink
     source: /Users/<%= ENV["USER"] %>/.config/karabiner/assets/complex_modifications/remap_control_l.json
     destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/karabiner/assets/complex_modifications/remap_control_l.json
 
