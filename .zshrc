@@ -58,7 +58,8 @@ export PATH="$HOME/go/bin:$PATH"
 export SOURCEKIT_TOOLCHAIN_PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
 eval "$(anyenv init -)"
 export PATH="$HOME/.anyenv/envs/nodenv/bin:$PATH"
-export NODE_OPTIONS=--openssl-legacy-provider
+#export NODE_OPTIONS=--openssl-legacy-provider
+export NODE_OPTIONS=""
 
 # pnpm
 export PNPM_HOME="/Users/hiroyuki/Library/pnpm"
