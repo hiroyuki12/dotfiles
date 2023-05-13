@@ -191,9 +191,11 @@ if [ "$?" -ne 0 ]; then
   git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
 fi
 
-nodenv install 16.13.2
+# nodenv install 16.13.2
+nodenv install 18.16.0
 nodenv rehash
-nodenv global 16.13.2
+# nodenv global 16.13.2
+nodenv global 18.16.0
 node -v
 
 break;
