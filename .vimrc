@@ -6,14 +6,14 @@ if &compatible
 endif
 
 " Required:
-set runtimepath+=/Users/hiroyuki/.cache/dein/repos/github.com/Shougo/dein.vim
+"set runtimepath+=/Users/hiroyuki/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('/Users/hiroyuki/.cache/dein')
+"call dein#begin('/Users/hiroyuki/.cache/dein')
 
 " Let dein manage dein
 " Required:
-call dein#add('/Users/hiroyuki/.cache/dein/repos/github.com/Shougo/dein.vim')
+"call dein#add('/Users/hiroyuki/.cache/dein/repos/github.com/Shougo/dein.vim')
 
 " Add or remove your plugins here like this:
 "call dein#add('Shougo/neosnippet.vim')
@@ -21,26 +21,26 @@ call dein#add('/Users/hiroyuki/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " ~~~ ここからtomlファイルを利用するための設定 ~~~
   " 導入するプラグインを記載したtomlファイルのパスを記載する
-   let s:toml_dir  = $HOME . '/.config/nvim/dein'
-   let s:toml      = s:toml_dir . '/dein.toml'
+"   let s:toml_dir  = $HOME . '/.config/nvim/dein'
+"   let s:toml      = s:toml_dir . '/dein.toml'
   " let s:lazy_toml = s:toml_dir . '/lazy.toml'
 
    " tomlファイルをキャッシュしておくための記述
-   call dein#load_toml(s:toml,      {'lazy': 0})
+"   call dein#load_toml(s:toml,      {'lazy': 0})
    "call dein#load_toml(s:lazy_toml, {'lazy': 1})
   " ~~~ tomlのための設定はここまで ~~~
 
 " Required:
-call dein#end()
+"call dein#end()
 
 " Required:
 filetype plugin indent on
 syntax enable
 
 " If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
+"if dein#check_install()
+"  call dein#install()
+"endif
 
 "End dein Scripts-------------------------
 
