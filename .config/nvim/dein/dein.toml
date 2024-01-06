@@ -4,3 +4,6 @@ repo = 'Shougo/vimproc.vim'
 [[plugins]]
 repo = 'neoclide/coc.nvim'
 build = './install.sh nightly'
+
+[[plugins]] # Svelte.js
+repo = 'evanleck/vim-svelte'
