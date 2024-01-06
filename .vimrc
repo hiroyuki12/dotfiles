@@ -1,5 +1,17 @@
 " nnoremap sf :new<Cr>:FuzzyFinderFile<Cr>
 
+call plug#begin()
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
+
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+
+call plug#end()
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
