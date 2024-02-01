@@ -15,6 +15,8 @@ resources:
 #    name: wget
   - type: package
     name: jq
+  - type: package
+    name: cocoapods
 #  - type: package
 #    name: deno 
 #  - type: package
@@ -295,7 +297,7 @@ resources:
     destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/nvim/dein/lazy.toml
   - type: symlink
     source: /Users/<%= ENV["USER"] %>/.config/nvim/init.vim
-    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/nvim/init.vim
+    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.vimrc
   - type: symlink
     source: /Users/<%= ENV["USER"] %>/.config/nvim/maps.vim
     destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/nvim/maps.vim
