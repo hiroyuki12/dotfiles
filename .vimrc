@@ -1,16 +1,16 @@
 " nnoremap sf :new<Cr>:FuzzyFinderFile<Cr>
 
-call plug#begin()
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
+" call plug#begin()
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'mattn/vim-lsp-settings'
+" Plug 'hrsh7th/vim-vsnip'
+" Plug 'hrsh7th/vim-vsnip-integ'
 
-Plug 'othree/html5.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
+" Plug 'othree/html5.vim'
+" Plug 'pangloss/vim-javascript'
+" Plug 'evanleck/vim-svelte', {'branch': 'main'}
 
-call plug#end()
+" call plug#end()
 
 "dein Scripts-----------------------------
 if &compatible
@@ -122,7 +122,7 @@ noremap tt <C-W><C-W>
 "noremap z. <C-W>=
 
 " b でブレース 対応する括弧(){}にジャンプ
-nmap b %
+" nmap b %
 
 " Splt window
 nmap ss :split<Return><C-w>w
