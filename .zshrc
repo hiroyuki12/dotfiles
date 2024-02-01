@@ -49,7 +49,7 @@ alias q='exit'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
-export PATH=~/bin/flutter/bin:$PATH
+export PATH=~/flutter/flutter/bin:$PATH
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 eval "$(rbenv init -)"
 export PATH=$HOME/.nodebrew/current/bin:$PATH
