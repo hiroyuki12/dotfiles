@@ -44,6 +44,18 @@ alias maspocket='time mas install 568494494'
 alias mascoteditor='time mas install 1024640650'
 alias mastodo='time mas install 1274495053'
 
+#alias ei="eza --icons --git"
+#alias ea="eza -a --icons --git"
+#jalias ee="eza -aahl --icons --git"
+#alias et="eza -T -L 3 -a -I 'node_modules|.git|.cache' --icons"
+#alias eta="eza -T -a -I 'node_modules|.git|.cache' --color=always --icons | less -r"
+#alias ls=ei
+#alias la=ea
+#alias ll=ee
+#alias lt=et
+#alias lta=eta
+#alias l="clear && ls"
+
 alias bcode='time b Caskroom/cask/visual-studio-code'
 alias q='exit'
 
