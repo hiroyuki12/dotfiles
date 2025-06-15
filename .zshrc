@@ -3,6 +3,7 @@ colors
 PS1="%{$fg[green]%}%~%(!.#. %{$reset_color%}$) "
 #SPROMPT="%{$fg[red]%}correct: %R -> %r [nyae]? %{$reset_color%}"
 #RPROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}"
+#PROMPT='%n@%m %1~ %#\n$ '
 
 alias tap='automator -v ~/github/dotfiles/automator/TapToClickOn.app/'
 alias vo='nvim'
@@ -84,3 +85,11 @@ export PATH="$PNPM_HOME:$PATH"
 # Bun
 export BUN_INSTALL="/Users/hiroyuki/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/hiroyuki/.lmstudio/bin"
+
+. "$HOME/.local/bin/env"
+
+# uv
+export PATH="$HOME/.local//bin:$PATH"
