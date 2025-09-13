@@ -3,8 +3,10 @@ resources:
     script: brew update
 
   # brew
-#  - type: package
-#    name: ripgrep
+  - type: package
+    name: ripgrep
+  - type: package
+    name: dust
   - type: package
     name: anyenv 
   - type: package
@@ -304,9 +306,9 @@ resources:
   - type: symlink
     source: /Users/<%= ENV["USER"] %>/.config/karabiner/assets/complex_modifications/remap_control_l.json
     destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/karabiner/assets/complex_modifications/remap_control_l.json
-  - type: symlink
-    source: /Users/<%= ENV["USER"] %>/.config/wezterm/wezterm.lua
-    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/wezterm/wezterms.lua
+#  - type: symlink
+#    source: /Users/<%= ENV["USER"] %>/.config/wezterm/wezterm.lua
+#    destination: /Users/<%= ENV["USER"] %>/github/dotfiles/.config/wezterm/wezterms.lua
 
   # rbenv_ruby
   #  - type: rbenv_ruby

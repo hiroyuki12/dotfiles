@@ -55,8 +55,9 @@ alias a='time serverkit apply recipe.yml.erb'
 
 alias cls='clear'
 alias ht=htop
-alias grep=rg
+alias grep='rg -i'
 alias gre='grep -H -n -I --color=auto'
+alias du=dust
 
 alias masxcode='time mas install 497799835'
 alias masnas='time mas install 450664466'
