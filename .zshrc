@@ -7,22 +7,43 @@ PS1="%{$fg[green]%}%~%(!.#. %{$reset_color%}$) "
 
 alias tap='automator -v ~/github/dotfiles/automator/TapToClickOn.app/'
 alias vo='nvim'
+alias suvi='sudo -H vim'
+alias suv=suvi
 
 alias gd='git diff'
 alias gc='git commit'
 alias gp='git push'
 alias gpu='git pull'
 alias gs='git status'
+alias gss='git status -sb'
 alias ga='git add'
 alias gl='git log'
 alias glp='git log -p'
+alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d
+%Creset%s'"
 alias gls='git log --stat'
+alias glggo='git log --graph --oneline'
 #alias gr='git checkout HEAD'
 alias gche='git checkout'
+alias grhh='git reset HEAD --hard'
+alias grh1='git reset HEAD^'
+alias grh1h='git reset HEAD^ --hard'
+alias gshow='git show'
+alias gsw='git switch'
 
+alias jd='jj diff'
+alias jc='jj describe -m '
+alias jn='jj new'
+alias jl='jj log'
+alias js='jj status'
+
+alias rm='rm -i'
+alias mv='mv -i'
+alias l='ls -CF'
 alias ll='ls -l'
 alias la='ls -a'
 alias ls='ls -G'
+alias l.='ls -d .[a-zA-Z]* --color=auto'
 
 alias sea='brew search'
 alias b='brew install'
@@ -33,6 +54,9 @@ alias d='cd ~/github/dotfiles'
 alias a='time serverkit apply recipe.yml.erb'
 
 alias cls='clear'
+alias ht=htop
+alias grep=rg
+alias gre='grep -H -n -I --color=auto'
 
 alias masxcode='time mas install 497799835'
 alias masnas='time mas install 450664466'
