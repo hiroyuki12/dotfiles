@@ -92,6 +92,27 @@ done;
 
 
 
+while true; do
+read -p 'Now Set Select Input Source control j? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+# Set Set Select Input Source control j
+curl -LSfs -o /tmp/open_keyboard_shortcuts_settings.applescript https://raw.githubusercontent.com/hiroyuki12/dotfiles/refs/heads/master/appleScript/open_keyboard_shortcuts_settings.applescript
+osascript /tmp/open_keyboard_shortcuts_settings.applescript
+
+break;
+;;
+[Nn]* )
+  echo "Skip Initial Setting"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
+
 
 
 
