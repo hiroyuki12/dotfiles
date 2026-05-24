@@ -31,7 +31,7 @@ read -p 'Now Set Tap to click ON & Natural Scrolling OFF? Open Tracpad Settings 
 case $Answer in
   '' | [Yy]* )
 
-# Tap to click Open Trackpad Settings
+# Set Tap to click ON & Natural Scrolling OFF Open Trackpad Settings
 curl -LSfs -o /tmp/open_trackpad_settings.applescript https://raw.githubusercontent.com/hiroyuki12/dotfiles/refs/heads/master/appleScript/open_trackpad_settings.applescript
 osascript /tmp/open_trackpad_settings.applescript
 
@@ -53,7 +53,7 @@ read -p 'Now Set Caps Lock Key to Command Key? [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
-# Caps Lock Key to Command Key
+# Set Caps Lock Key to Command Key
 curl -LSfs -o /tmp/open_modifier_keys_settings.applescript https://raw.githubusercontent.com/hiroyuki12/dotfiles/refs/heads/master/appleScript/open_modifier_keys_settings.applescript
 osascript /tmp/open_modifier_keys_settings.applescript
 
@@ -67,6 +67,32 @@ break;
   echo Please answer YES or NO.
 esac
 done;
+
+
+
+while true; do
+read -p 'Now Set Key repeat fast? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+# Set Key repeat fast
+curl -LSfs -o /tmp/open_keyboard_settings.applescript https://raw.githubusercontent.com/hiroyuki12/dotfiles/refs/heads/master/appleScript/open_keyboard_settings.applescript
+osascript /tmp/open_keyboard_settings.applescript
+
+break;
+;;
+[Nn]* )
+  echo "Skip Initial Setting"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
+
+
+
 
 
 
