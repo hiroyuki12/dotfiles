@@ -6,15 +6,13 @@ workspace=/tmp/dotfiles
 # start Set Three finger drag
 
 while true; do
-read -p 'Now Set Three Finger Drag? Tracpad Options [Y/n]' Answer
+read -p 'Now Set Three Finger Drag? Open Tracpad Options [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
-
-# Three Finger Drag Trackpad Options
+# Three Finger Drag Open Trackpad Options
 curl -LSfs -o /tmp/three_finger_open_pointer_control.applescript https://raw.githubusercontent.com/hiroyuki12/dotfiles/refs/heads/master/appleScript/three_finger_open_pointer_control.applescript
 osascript /tmp/three_finger_open_pointer_control.applescript
-
 
 break;
 ;;
@@ -26,6 +24,29 @@ break;
   echo Please answer YES or NO.
 esac
 done;
+
+
+while true; do
+read -p 'Now Set Tap to click? Open Tracpad Settings [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+# Tap to click Open Trackpad Settings
+curl -LSfs -o /tmp/open_trackpad_settings.applescript https://raw.githubusercontent.com/hiroyuki12/dotfiles/refs/heads/master/appleScript/open_trackpad_settings.applescript
+osascript /tmp/open_trackpad_settings.applescript
+
+break;
+;;
+[Nn]* )
+  echo "Skip Initial Setting"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
+
 
 
 
