@@ -114,6 +114,26 @@ done;
 
 
 
+while true; do
+read -p 'Now Set Finder Show Home? [Y/n]' Answer
+case $Answer in
+  '' | [Yy]* )
+
+# Set Set Select Input Source control j
+curl -LSfs -o /tmp/open_finder_settings_show_home.scpt https://raw.githubusercontent.com/hiroyuki12/dotfiles/refs/heads/master/appleScript/open_finder_settings_show_home.scpt
+osascript /tmp/open_finder_settings_show_home.scpt
+
+break;
+;;
+[Nn]* )
+  echo "Skip Initial Setting"
+  break;
+  ;;
+* )
+  echo Please answer YES or NO.
+esac
+done;
+
 
 
 
@@ -197,34 +217,18 @@ done;
 
 # start Exec Automator
 
-while true; do
-read -p 'Now exec automator? [Y/n]' Answer
-case $Answer in
-  '' | [Yy]* )
-
-##
 # ok tapToClickOn
-automator -v automator/TapToClickOn.app
+#automator -v automator/TapToClickOn.app
 
 # Add Input Sources Japanese
 #automator -v automator/addInputSourceJapanese.app
 
 # Finder Show Home
-automator -v automator/FinderShowHome.app
+#automator -v automator/FinderShowHome.app
 
 # ng Safari Prevent cross-site tracking off
 #automator -v automator/SafariPreventOff.app
 
-break;
-;;
-[Nn]* )
-  echo "Skip Exec automator"
-  break;
-  ;;
-* )
-  echo Please answer YES or NO.
-esac
-done;
 
 # Install homebrew
 which brew > /dev/null
