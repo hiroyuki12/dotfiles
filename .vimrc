@@ -70,8 +70,8 @@ syntax on " color    /etc/vimrc(fedora)
 imap <C-l> <esc>
 map <C-l> <esc>
 cmap <C-l> <C-C>
-noremap <Space>y "*y
-noremap <Space>p "*p
+"noremap <Space>y "*y
+"noremap <Space>p "*p
 nnoremap ,vr :source %<CR>
 map <C-k> D
 map <Space> <C-d>
@@ -91,9 +91,9 @@ nnoremap g* g*zzzv
 nnoremap g# g#zzzv
 
 " vimfiler
-nmap sf :VimFilerBufferDir<Return>
-nmap sF :VimFilerExplorer -find<Return>
-nmap sb :Unite buffer<Return>
+"nmap sf :VimFilerBufferDir<Return>
+"nmap sF :VimFilerExplorer -find<Return>
+"nmap sb :Unite buffer<Return>
 let g:vimfiler_as_default_explorer = 1
 let g:vimfiler_safe_mode_by_default = 0
 let g:vimfiler_enable_auto_cd = 0
@@ -125,14 +125,10 @@ noremap tt <C-W><C-W>
 " nmap b %
 
 " Splt window
-nmap ss :split<Return><C-w>w
+"nmap ss :split<Return><C-w>w
 nmap sv :vsplit<Return><C-w>w
  " Move window
-nmap <Space> <C-w>w
-map s<left> <C-w>h
-map s<up> <C-w>k
-map s<down> <C-w>j
-map s<right> <C-w>l
+"nmap <Space> <C-w>w
 map sh <C-w>h
 map sk <C-w>k
 map sj <C-w>j
