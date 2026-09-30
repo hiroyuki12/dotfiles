@@ -49,6 +49,12 @@ resources:
 #    name: dropbox
   - type: homebrew_cask_package
     name: mounty
+
+  # Mac App Store
+  - id: mas install RunCat Neo
+    type: command
+    check_script: mas list | grep "RunCat Neo"
+    script: mas install 6757801838
 #  - type: homebrew_cask_package
 #    name: alfred
 #  - type: homebrew_cask_package
@@ -344,4 +350,3 @@ handlers:
   - id: killall_Terminal
  #   type: command
  #   script: killall Terminal
-
