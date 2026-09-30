@@ -311,6 +311,7 @@ if [ "$?" -ne 0 ]; then
   git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
 fi
 
+git -C "$(nodenv root)"/plugins/node-build pull --ff-only
 nodenv install 26.2.0
 nodenv rehash
 nodenv global 26.2.0
