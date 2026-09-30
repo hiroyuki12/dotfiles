@@ -297,7 +297,7 @@ done;
 # start Install nodenv
 
 while true; do
-read -p 'Now install nodenv & node 16.13.2? [Y/n]' Answer
+read -p 'Now install nodenv & node 26.2.0? [Y/n]' Answer
 case $Answer in
   '' | [Yy]* )
 
@@ -311,17 +311,15 @@ if [ "$?" -ne 0 ]; then
   git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
 fi
 
-# nodenv install 16.13.2
-nodenv install 18.16.0
+nodenv install 26.2.0
 nodenv rehash
-# nodenv global 16.13.2
-nodenv global 18.16.0
+nodenv global 26.2.0
 node -v
 
 break;
 ;;
 [Nn]* )
-  echo "Skip install nodenv & node 16.13.2"
+  echo "Skip install nodenv & node 26.2.0"
   break;
   ;;
 * )
