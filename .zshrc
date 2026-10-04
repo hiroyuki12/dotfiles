@@ -1,11 +1,9 @@
-autoload colors
-colors
-PS1="%{$fg[green]%}%~%(!.#. %{$reset_color%}$) "
+PROMPT='%F{green}%~%f%(!.#.$) '
 #SPROMPT="%{$fg[red]%}correct: %R -> %r [nyae]? %{$reset_color%}"
 #RPROMPT="%{$fg[cyan]%}[%~]%{$reset_color%}"
 #PROMPT='%n@%m %1~ %#\n$ '
 
-alias tap='automator -v ~/github/dotfiles/automator/TapToClickOn.app/'
+alias tap="automator -v $HOME/github/dotfiles/automator/TapToClickOn.app/"
 alias vo='nvim'
 alias suvi='sudo -H vim'
 alias suv=suvi
@@ -19,8 +17,7 @@ alias gss='git status -sb'
 alias ga='git add'
 alias gl='git log'
 alias glp='git log -p'
-alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d
-%Creset%s'"
+alias glg="git log --stat --pretty=format:'%Cblue%h %Cgreen%ai %Cred%an %d%n%Creset%s'"
 alias gls='git log --stat'
 alias glggo='git log --graph --oneline'
 #alias gr='git checkout HEAD'
@@ -56,7 +53,7 @@ alias a='time serverkit apply recipe.yml.erb'
 alias cls='clear'
 alias ht=htop
 alias grep='rg -i'
-alias gre='grep -H -n -I --color=auto'
+alias gre='command grep -H -n -I --color=auto'
 alias du=dust
 
 alias masxcode='time mas install 497799835'
@@ -72,7 +69,7 @@ alias mastodo='time mas install 1274495053'
 
 #alias ei="eza --icons --git"
 #alias ea="eza -a --icons --git"
-#jalias ee="eza -aahl --icons --git"
+#alias ee="eza -aahl --icons --git"
 #alias et="eza -T -L 3 -a -I 'node_modules|.git|.cache' --icons"
 #alias eta="eza -T -a -I 'node_modules|.git|.cache' --color=always --icons | less -r"
 #alias ls=ei
@@ -82,37 +79,41 @@ alias mastodo='time mas install 1274495053'
 #alias lta=eta
 #alias l="clear && ls"
 
-alias bcode='time b Caskroom/cask/visual-studio-code'
+alias bcode='time brew install --cask visual-studio-code'
 alias q='exit'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="$HOME/.deno/bin:$PATH"
-export PATH=~/flutter/flutter/bin:$PATH
+export PATH="$HOME/flutter/flutter/bin:$PATH"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-eval "$(rbenv init -)"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-export PATH="$HOME/.nodenv/shims:$PATH"
+if (( $+commands[rbenv] )); then
+  eval "$(rbenv init -)"
+fi
+#export PATH=$HOME/.nodebrew/current/bin:$PATH
+#export PATH="$HOME/.nodenv/shims:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export SOURCEKIT_TOOLCHAIN_PATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
-eval "$(anyenv init -)"
-export PATH="$HOME/.anyenv/envs/nodenv/bin:$PATH"
+if (( $+commands[anyenv] )); then
+  eval "$(anyenv init -)"
+fi
+#export PATH="$HOME/.anyenv/envs/nodenv/bin:$PATH"
 #export NODE_OPTIONS=--openssl-legacy-provider
 export NODE_OPTIONS=""
 
 # pnpm
-export PNPM_HOME="/Users/hiroyuki/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 # bun completions
-[ -s "/Users/hiroyuki/.bun/_bun" ] && source "/Users/hiroyuki/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"
 
 # Bun
-export BUN_INSTALL="/Users/hiroyuki/.bun"
+export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/hiroyuki/.lmstudio/bin"
+export PATH="$PATH:$HOME/.lmstudio/bin"
 
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 

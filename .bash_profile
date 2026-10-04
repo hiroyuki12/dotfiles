@@ -15,7 +15,7 @@ alias ls='ls -G'
 
 alias sea='brew search'
 alias b='brew install'
-alias c='brew cask install'
+alias c='brew install --cask'
 
 alias d='cd ~/github/dotfiles'
 alias a='time serverkit apply recipe.yml.erb'
@@ -30,7 +30,7 @@ alias mascoteditor='time mas install 1024640650'
 alias masnas='time mas install 450664466'
 alias mastodo='time mas install 1274495053'
 
-alias bcode='time b Caskroom/cask/visual-studio-code'
+alias bcode='time brew install --cask visual-studio-code'
 alias q='exit'
 
 export PATH="$HOME/.rbenv/bin:$PATH"
