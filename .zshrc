@@ -114,7 +114,12 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/hiroyuki/.lmstudio/bin"
 
-. "$HOME/.local/bin/env"
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
 # uv
-export PATH="$HOME/.local//bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+# plenv
+if (( $+commands[plenv] )); then
+  eval "$(plenv init - zsh)"
+fi
